@@ -22,9 +22,10 @@ class AnnotationUtils() {
     USE_STANFORD_PARSE, USE_STANFORD_DEP, USE_SRL_VERB, USE_SRL_NOM,
     USE_QUANTIFIER)
   val viewsToDisable = Set(USE_SRL_NOM, USE_QUANTIFIER, USE_STANFORD_DEP)
-  val viewsToAdd = Seq(ViewNames.POS, ViewNames.LEMMA, ViewNames.NER_CONLL, ViewNames.NER_ONTONOTES,
+/*  val viewsToAdd = Seq(ViewNames.POS, ViewNames.LEMMA, ViewNames.NER_CONLL, ViewNames.NER_ONTONOTES,
     ViewNames.SHALLOW_PARSE, ViewNames.PARSE_STANFORD, ViewNames.DEPENDENCY_STANFORD, ViewNames.SRL_VERB, ViewNames.SRL_PREP,
-    ViewNames.SRL_COMMA /*, ViewNames.QUANTITIES*/ )
+    ViewNames.SRL_COMMA /*, ViewNames.QUANTITIES*/ ) */
+    val viewsToAdd = Seq(ViewNames.POS, ViewNames.LEMMA, ViewNames.SHALLOW_PARSE, ViewNames.PARSE_STANFORD, ViewNames.DEPENDENCY_STANFORD)
 
   lazy val globalAnnotationCache = new TextAnnotationMapDBHandler("allTheCacheTogether.db")
 
@@ -159,9 +160,9 @@ class AnnotationUtils() {
       println("--> normal views: ")
       val ta1 = pipelineServerClient.annotate(input)
       println(" --> external: ")
-      pipelineExternalAnnotatorsServerClient.addView(ta1)
+      //pipelineExternalAnnotatorsServerClient.addView(ta1)
       println(" --> curator: ")
-      if (Constants.useCurator) annotateWithCuratorAndSaveUnderName(ta1.text, TextILPSolver.curatorSRLViewName, ViewNames.SRL_VERB, ta1)
+      //if (Constants.useCurator) annotateWithCuratorAndSaveUnderName(ta1.text, TextILPSolver.curatorSRLViewName, ViewNames.SRL_VERB, ta1)
       println(" --> adding fill in the blanks ")
       if (withFillInBlank) ta1.addView(fillInBlankAnnotator)
       globalAnnotationCache.addTextAnnotation("", ta1)

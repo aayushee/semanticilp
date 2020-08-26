@@ -15,14 +15,14 @@ object Constants {
   val textILPModel: TextILPModel = TextILPModel.EnsembleMinimal
 
   // annotator servers
-  val sahandPort = "8081"
-  val sahandServer = "http://cogcomp.dev.ai2"
+  val sahandPort = "9002"
+  val sahandServer = "http://localhost"
 
-  val cogcompAnnotatorPort = "5800"
-  val cogcompAnnotatorServer = "http://cogcomp.dev.ai2" // "http://austen.cs.illinois.edu" // "http://cogcomp.dev.ai2"
+  val cogcompAnnotatorPort = "9000"
+  val cogcompAnnotatorServer = "http://localhost" // "http://austen.cs.illinois.edu" // "http://cogcomp.dev.ai2"
 
-  val externalAnnotatorsPort = "8009"
-  val externalAnnotatorsServer = "http://cogcomp.dev.ai2" // "http://bronte.cs.illinois.edu"
+  val externalAnnotatorsPort = "9001"
+  val externalAnnotatorsServer = "http://localhost" // "http://bronte.cs.illinois.edu"
 
   // whether to extract curator or not
   val useCurator = textILPModel match {
@@ -60,7 +60,7 @@ object Constants {
   )
 
   val localElastic = Elastic(
-    clusterName = "danielk", hostIp = "localhost", hostPort = 9300,
+    clusterName = "docker-cluster", hostIp = "localhost", hostPort = 9300,
     Map("tables-to-sentences2-2017-06-20" -> "Barrons 4th Grade Study Guide")
   )
 

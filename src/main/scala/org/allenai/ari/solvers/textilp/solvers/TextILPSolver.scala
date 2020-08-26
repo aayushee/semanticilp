@@ -576,6 +576,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val (q: Question, p: Paragraph) = preprocessQuestionData(question, options, snippet)
     val types = Seq(SimpleMatching, VerbSRLandPrepSRL, SRLV1ILP, VerbSRLandCoref /*, VerbSRLandCommaSRL*/)
     val srlViewsAll = Seq(ViewNames.SRL_VERB /*, TextILPSolver.curatorSRLViewName, TextILPSolver.pathLSTMViewName*/)
+    //val srlViewsAll = Seq(SimpleMatching)
     val scores = types.flatMap { t =>
       val start = System.currentTimeMillis()
       SolverUtils.printMemoryDetails()
@@ -3310,7 +3311,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
   private def extractFeatureVectorForQuestion(question: String, options: Seq[String], snippet: String) = {
     val types = Constants.textILPModel match {
       case TextILPModel.EnsembleFull | TextILPModel.EnsembleMinimal =>
-        Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, SRLV1Rule, VerbSRLandPrepSRL, SRLV1ILP, VerbSRLandCoref, SRLV2Rule, SRLV3Rule, VerbSRLandCommaSRL)
+       // Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, SRLV1Rule, VerbSRLandPrepSRL, SRLV1ILP, VerbSRLandCoref, SRLV2Rule, SRLV3Rule, VerbSRLandCommaSRL)
+        Seq(SimpleMatching)
       case TextILPModel.EnsembleNoCoref =>
         Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, SRLV1Rule, VerbSRLandPrepSRL, SRLV1ILP, SRLV2Rule, SRLV3Rule, VerbSRLandCommaSRL)
       case TextILPModel.EnsembleNoPrepSRL =>
@@ -3325,7 +3327,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         throw new Exception(s"Feature extraction is not defined for your selection ${Constants.textILPModel}")
     }
     val srlViewsAll = if (Constants.textILPModel == TextILPModel.EnsembleMinimal) {
-      Seq(ViewNames.SRL_VERB, TextILPSolver.pathLSTMViewName)
+      //Seq(ViewNames.SRL_VERB, TextILPSolver.pathLSTMViewName)
+      Seq(TextILPSolver.pathLSTMViewName)
     }
     else {
       Seq(ViewNames.SRL_VERB, TextILPSolver.curatorSRLViewName, TextILPSolver.pathLSTMViewName)

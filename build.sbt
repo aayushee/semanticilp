@@ -97,7 +97,7 @@ lazy val root = (project in file(".")).
       Resolver.mavenLocal,
       Resolver.bintrayRepo("allenai", "maven"),
       Resolver.bintrayRepo("allenai", "private"),
-      "CogcompSoftware" at "http://cogcomp.cs.illinois.edu/m2repo/"
+      "CogcompSoftware" at "https://cogcomp.seas.upenn.edu/m2repo/"
     )
   )
 
