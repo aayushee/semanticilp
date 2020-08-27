@@ -51,7 +51,7 @@ case object WhatDoesItDoRule extends ReasoningType
 trait TextILPModel {}
 
 object TextILPModel {
-
+  case object MyModel extends TextILPModel
   // ensemble of annotators; this achieves good results across the two datasets; used in AAAI paper
   case object EnsembleFull extends TextILPModel
 
@@ -404,6 +404,11 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     } -> "srlV1ILP_path_lstm"
 
     val resultOpt = Constants.textILPModel match {
+      case TextILPModel.MyModel =>
+        (resultSimpleMatching #:: Stream.empty).find { t =>
+          println("trying: " + t._2)
+          t._1._1.nonEmpty
+        }
       case TextILPModel.StackedForScience =>
 /*
         (resultVerbSRLPlusCoref_curatorSRL #:: resultVerbSRLPlusCommaSRL_pathLSTM #:: resultSRLV3_curator #::
@@ -471,7 +476,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         // note: there is inefficiency here; we preprocess the input once at the beginning of this function, and also inside the linear classifier
         val result = EntityRelationResult()
         val selected = Seq(predictMaxScoreWekaClassifier(question, options, snippet))
-        Some((selected, result) -> "Ensemble")
+        Some((selected, result) -> "EnsembleMinimal")
     }
 
     /*resultCause #:: resultWhatDoesItdo #:: resultVerbSRLPlusCoref_curatorSRL #:: resultVerbSRLPlusCoref_pathLSTM #::
@@ -3333,17 +3338,21 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     else {
       Seq(ViewNames.SRL_VERB, TextILPSolver.curatorSRLViewName, TextILPSolver.pathLSTMViewName)
     }
-
+    val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
+    //val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(SimpleMatching), useSummary = true, TextILPSolver.pathLSTMViewName)
+    //ilpSolver.free()
+    //result
     val results = types.flatMap { t =>
       val srlViewTypes = if (t == CauseRule || t == WhatDoesItDoRule || t == SimpleMatching) Seq(TextILPSolver.pathLSTMViewName) else srlViewsAll
       srlViewTypes.flatMap { srlVu =>
-        val results = solveAllAnswerOptions(question, options, snippet, t, srlVu)
+        //val results = solveTopAnswer(question, snippet, ilpSolver, aligner, Set(SimpleMatching), useSummary = true, TextILPSolver.pathLSTMViewName)
+        val results=solveAllAnswerOptions(question, options, snippet, t, srlVu)
         results.flatMap { case (a, b) =>
           a.map { c => (t, srlVu, c) -> b.statistics }
         }
       }
     }.toMap
-
+    ilpSolver.free()
     options.indices.map { idx =>
       types.flatMap { t =>
         val srlViewTypes = if (t == CauseRule || t == WhatDoesItDoRule || t == SimpleMatching) Seq(TextILPSolver.pathLSTMViewName) else srlViewsAll
