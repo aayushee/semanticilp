@@ -2975,7 +2975,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       solveTimeInSec = (modelSolveStart - modelCreationStart) / 1000.0, objectiveValue = ilpSolver.getPrimalbound)
     ilpSolver.exportModel("Orig_ILP_Model",true)
     ilpSolver.exportModel("Reduced_ILP_Model",false)
-    val iter = ilpSolver.getAllActiveVars()
+    val iter = ilpSolver.getAllActiveVars
     ilpSolver.printResult(iter)
     if (verbose) {
       println("Statistics: " + statistics)
