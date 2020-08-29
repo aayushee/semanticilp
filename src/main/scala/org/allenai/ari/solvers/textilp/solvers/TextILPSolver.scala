@@ -2973,9 +2973,10 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val statistics = Stats(numberOfBinaryVars, numberOfContinuousVars, numberOfIntegerVars, numberOfConstraints,
       ilpIterations = ilpSolver.getNLPIterations, modelCreationInSec = (modelSolveEnd - modelSolveStart) / 1000.0,
       solveTimeInSec = (modelSolveStart - modelCreationStart) / 1000.0, objectiveValue = ilpSolver.getPrimalbound)
-    ilpSolver.exportModel('Orig_ILP_Model',true)
-    ilpSolver.exportModel('Reduced_ILP_Model',false)
-    ilpSolver.printResult(ilpSolver.getAllActiveVars())
+    ilpSolver.exportModel("Orig_ILP_Model",true)
+    ilpSolver.exportModel("Reduced_ILP_Model",false)
+    val iter = ilpSolver.getAllActiveVars()
+    ilpSolver.printResult(iter)
     if (verbose) {
       println("Statistics: " + statistics)
       println("ilpSolver.getPrimalbound: " + ilpSolver.getPrimalbound)

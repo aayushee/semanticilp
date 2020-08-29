@@ -31,10 +31,10 @@ trait ReasoningType {}
 
 case object SimpleMatching extends ReasoningType
 
-trait SingleSolver {}
+trait TextILPModel {}
 
-object SingleSolver {
-  case object MyModel extends SingleSolver
+object TextILPModel {
+  case object MyModel extends TextILPModel
 
 }
 
