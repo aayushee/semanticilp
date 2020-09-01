@@ -45,14 +45,14 @@ object SolverUtils {
     alignmentScoreDiscount = 0.0, // not used
     questionCellOffset = -0.4, // tuned
     paragraphAnswerOffset = -0.4, // tuned
-    firstOrderDependencyEdgeAlignments = 0.0,
-    activeSentencesDiscount = -2.5, // tuned
+    firstOrderDependencyEdgeAlignments = 0.5,
+    activeSentencesDiscount = 0.5, // tuned
     activeParagraphConstituentsWeight = 0.0, // tuned
     minQuestionTermsAligned = 1,
-    maxQuestionTermsAligned = 3,
+    maxQuestionTermsAligned = 5,
     minQuestionTermsAlignedRatio = 0.1,
     maxQuestionTermsAlignedRatio = 0.65,
-    maxActiveSentences = 2,
+    maxActiveSentences = 15,
     longerThan1TokenAnsPenalty = 0.0,
     longerThan2TokenAnsPenalty = 0.0,
     longerThan3TokenAnsPenalty = 0.02,
@@ -557,7 +557,8 @@ object SolverUtils {
       val maxIdx = sentences.length
       val allSelected = (selectedIdx ++ selectedIdx.map(_ + 1)).filter(_ < maxIdx).distinct
       val subParagraph = allSelected.map(sentences(_)).mkString(" ")
-      subParagraph
+      //subParagraph
+      sentences.mkString(" ")
     }
   }
 }
