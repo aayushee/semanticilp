@@ -45,7 +45,7 @@ object SolverUtils {
     alignmentScoreDiscount = 0.0, // not used
     questionCellOffset = -0.4, // tuned
     paragraphAnswerOffset = -0.4, // tuned
-    firstOrderDependencyEdgeAlignments = 0.5,
+    firstOrderDependencyEdgeAlignments = 0.1,
     activeSentencesDiscount = 0.5, // tuned
     activeParagraphConstituentsWeight = 0.0, // tuned
     minQuestionTermsAligned = 1,

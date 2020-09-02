@@ -1,0 +1,1762 @@
+STATISTICS
+  Problem name     : textILP
+  Variables        : 499 (499 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 1254 initial, 1254 maximal
+OBJECTIVE
+  Sense            : maximize
+VARIABLES
+  [binary] <activeAnsOptId0>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsOptId1>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsOptId2>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsOptId3>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=0.193541601072593, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.1, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.1, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.398376623376623, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.428562531291379, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.370588235294118, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0.259713149457111, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.271437468708621, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.398663101604278, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.103229199463704, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.103229199463704, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <activeSentence:0>: obj=0.5, original bounds=[0,1]
+  [binary] <activeSentence:1>: obj=0.5, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <Relation:0>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:1>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:2>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:3>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:4>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:5>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:8>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:9>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:10>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:11>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:12>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsOptId0>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsOptId1>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsOptId2>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsOptId3>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=0.193541601072593, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.1, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.1, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.398376623376623, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.428562531291379, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.370588235294118, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0.259713149457111, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=0.271437468708621, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.398663101604278, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0.6, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-1.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.103229199463704, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.9, original bounds=[0,1]
+  [binary] <>: obj=-0.103229199463704, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=-0.4, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <>: obj=0, original bounds=[0,1]
+  [binary] <activeSentence:0>: obj=0.5, original bounds=[0,1]
+  [binary] <activeSentence:1>: obj=0.5, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <activeQuestionCons>: obj=0.33, original bounds=[0,1]
+  [binary] <Relation:0>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:1>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:2>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:3>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:4>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:5>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:8>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:9>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:10>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:11>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <Relation:12>: obj=0.1, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <activeAnsweOptionPairs>: obj=0, original bounds=[0,1]
+  [binary] <longerThanOnePenalty>: obj=0, original bounds=[0,1]
+  [binary] <longerThanTwoPenalty>: obj=0, original bounds=[0,1]
+  [binary] <longerThanOnePenalty>: obj=0, original bounds=[0,1]
+  [binary] <longerThanTwoPenalty>: obj=0, original bounds=[0,1]
+  [binary] <longerThanOnePenalty>: obj=0, original bounds=[0,1]
+  [binary] <longerThanTwoPenalty>: obj=0, original bounds=[0,1]
+  [binary] <longerThanThreePenalty>: obj=0.02, original bounds=[0,1]
+CONSTRAINTS
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeQuestionIneq1>:  -<>[B] +<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq2>: <>[B] -<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq1>: <activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq1>:  -<>[B] -<>[B] +<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq2>: <>[B] -<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq2>: <>[B] -<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq1>: <activeQuestionCons>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:0>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:0>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:0>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:1>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:1>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:1>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:2>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:2>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:2>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:3>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:3>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:3>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:4>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:4>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:4>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:5>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:5>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:5>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:8>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:8>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:8>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:9>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:9>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:9>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:10>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:10>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:10>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:11>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:11>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:11>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:12>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:12>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:12>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] <= 8;
+  [linear] <activeParagraphConsVar>: <>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] <= 8;
+  [linear] <>: <>[B] +<>[B] <= 3;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:0>[B] <= 0;
+  [linear] <activeOptionVar>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] -<activeSentence:1>[B] <= 0;
+  [linear] <activeQuestionIneq1>:  -<>[B] +<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq2>: <>[B] -<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq1>: <activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq1>:  -<>[B] -<>[B] +<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq2>: <>[B] -<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq2>: <>[B] -<activeQuestionCons>[B] <= 0;
+  [linear] <activeQuestionIneq1>: <activeQuestionCons>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:0>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:0>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:0>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:1>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:1>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:1>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:2>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:2>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:2>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:3>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:3>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:3>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:4>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:4>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:4>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:5>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:5>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:5>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:8>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:8>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:8>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:9>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:9>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:9>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:10>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:10>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:10>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:11>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:11>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:11>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:12>[B] -<>[B] <= 0;
+  [linear] <dependencyVariableActiveOnlyIfSourceConsIsActive>: <Relation:12>[B] -<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<>[B] -<>[B] +<activeAnsweOptionPairs>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <NoActivePairIfNonAreActive>:  -<activeAnsweOptionPairs>[B] +<>[B] <= 0;
+  [linear] <atLeastOnePairShouldBeActive>:  -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] -<activeAnsweOptionPairs>[B] +<Relation:12>[B] <= 0;
+  [linear] <activeParagraphConsVar>: <>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] <= 8;
+  [linear] <activeParagraphConsVar>: <>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] +<>[B] <= 8;
+  [linear] <>: <>[B] +<>[B] <= 3;
+  [linear] <maxActiveParagraphConsVar>: 0 <= <activeSentence:0>[B] +<activeSentence:1>[B] <= 15;
+  [linear] <longerThanOnePenaltyActiveOnlyWhenOptionIsActive>:  -<longerThanOnePenalty>[B] +<activeAnsOptId1>[B] <= 0;
+  [linear] <longerThanOnePenaltyActiveOnlyWhenOptionIsActive>:  -<longerThanTwoPenalty>[B] +<activeAnsOptId1>[B] <= 0;
+  [linear] <longerThanOnePenaltyActiveOnlyWhenOptionIsActive>:  -<longerThanOnePenalty>[B] +<activeAnsOptId2>[B] <= 0;
+  [linear] <longerThanOnePenaltyActiveOnlyWhenOptionIsActive>:  -<longerThanTwoPenalty>[B] +<activeAnsOptId2>[B] <= 0;
+  [linear] <longerThanOnePenaltyActiveOnlyWhenOptionIsActive>:  -<longerThanOnePenalty>[B] +<activeAnsOptId3>[B] <= 0;
+  [linear] <longerThanOnePenaltyActiveOnlyWhenOptionIsActive>:  -<longerThanTwoPenalty>[B] +<activeAnsOptId3>[B] <= 0;
+  [linear] <longerThanThreePenaltyActiveOnlyWhenOptionIsActive>:  -<longerThanThreePenalty>[B] +<activeAnsOptId3>[B] <= 0;
+  [linear] <activeQuestionConsVarNum>: 1 <= <activeQuestionCons>[B] +<activeQuestionCons>[B] +<activeQuestionCons>[B] +<activeQuestionCons>[B] <= 5;
+  [linear] <activeQuestionConsVarRatio>: 0.4 <= <activeQuestionCons>[B] +<activeQuestionCons>[B] +<activeQuestionCons>[B] +<activeQuestionCons>[B] <= 2.6;
+  [linear] <activeOptionVarImplesOneActiveConnectedEdge>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId0>[B] <= 0;
+  [linear] <activeOptionVarImplesOneActiveConnectedEdge>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId1>[B] <= 0;
+  [linear] <activeOptionVarImplesOneActiveConnectedEdge>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId2>[B] <= 0;
+  [linear] <activeOptionVarImplesOneActiveConnectedEdge>:  -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] -<>[B] +<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <activeConnectedEdgeImpliesOneAnswerOption>: <>[B] -<activeAnsOptId3>[B] <= 0;
+  [linear] <onlyOneActiveOption>: <activeAnsOptId0>[B] +<activeAnsOptId1>[B] +<activeAnsOptId2>[B] +<activeAnsOptId3>[B] == 1;
+END
