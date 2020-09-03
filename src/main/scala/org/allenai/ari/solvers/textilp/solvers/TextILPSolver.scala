@@ -1468,7 +1468,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
       val sentences = p.context.split("\\.")
-      val activeSentList = sentList.map(sentences(_)).mkString(" ")
+      val activeSentList = sentList.map(sentences(_)).mkString(",")
 
 
       questionParagraphAlignments.foreach {
@@ -1609,6 +1609,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         //"  activeQuestionConstituents: " + stringifyVariableSequence3(activeQuestionConstituents) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
+        " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
+        " activeSentences: " + activeSentList +
         "  aTokens: " + aTokens.toString
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
