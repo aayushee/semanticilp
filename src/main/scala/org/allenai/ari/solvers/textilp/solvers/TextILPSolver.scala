@@ -1606,7 +1606,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       if (verbose) println("returning the answer  . . . ")
 
       val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
-        //"  activeQuestionConstituents: " + stringifyVariableSequence3(activeQuestionConstituents) +
+        "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +

@@ -96,9 +96,13 @@ object ProcessBankReader {
       replaceAll("in the example shown in Figure \\d{1,2}[\\,\\.]{1}\\d{1,2}\\)", "").
       replaceAll("see Chapter \\d{1,2}", "").
       replaceAll("\\(see p. \\d{1,3}\\)", "")*/
-    val out = str.trim.replaceAll("\\((.+?)\\)", "")
+    //val out = str.trim.replaceAll("\\((.+?)\\)", "")
+    val out = str.trim.replaceAll("\\(", "")
+    val out2 = out.trim.replaceAll("\\)", "")
+
+
     println("output after dropping the paranthesis: " + out)
-    out
+    out2
   }
 
   implicit class ImplicitConversionsFromParagraphs(paragraphList: List[Paragraph]) {

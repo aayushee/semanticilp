@@ -1,633 +1,1361 @@
 STATISTICS
   Problem name     : t_textILP
-  Variables        : 243 (243 binary, 0 integer, 0 implicit integer, 0 continuous)
-  Constraints      : 123 initial, 124 maximal
+  Variables        : 941 (941 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 251 initial, 251 maximal
 OBJECTIVE
   Sense            : minimize
-  Offset           : -5.5332547505297
 VARIABLES
   [binary] <t_activeAnsOptId0>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsOptId1>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeAnsOptId1>: obj=-0, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_activeAnsOptId2>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_activeAnsOptId3>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0.93, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=-0.6, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0.193541601072593, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
   [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
   [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.156862448242366, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.6, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.169730807997155, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.102629232607504, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.121602070308398, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.112714690633059, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.112714690633059, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.6, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.303037147768315, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=-0.6, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.398376623376623, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.365593899591137, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.217460317460317, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0.428562531291379, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.370588235294118, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0.259713149457111, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0.271437468708621, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.214762362829555, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.329433281077926, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.328063053526041, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.217460317460317, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.365593899591137, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.217460317460317, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.344444444444444, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.371439841037165, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.398663101604278, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=-0.011764705882353, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.387864077669903, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.365593899591137, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.217460317460317, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.344444444444444, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.214762362829555, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.329433281077926, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.328063053526041, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.214762362829555, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.329433281077926, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.328063053526041, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.214762362829555, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.329433281077926, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.328063053526041, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.217460317460317, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.365593899591137, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.217460317460317, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.370671332508396, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.360931276186056, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.395924804318727, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.388317610130997, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.365014673806304, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.396350736950317, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=-0.011764705882353, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.387864077669903, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.303037147768315, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=-0.6, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.217460317460317, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.379498941525152, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.358997883050305, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.271359223300971, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=-0.6, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=1.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.103229199463704, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.9, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=0.103229199463704, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=-0.011764705882353, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.387864077669903, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
   [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeSentence:0>: obj=-0.5, global bounds=[1,1], local bounds=[1,1]
-  [binary] <t_activeSentence:1>: obj=-0.5, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeQuestionCons>: obj=-0.33, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:0>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:1>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:2>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:3>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:4>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:5>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:8>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:9>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:10>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:11>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_Relation:12>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.9, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.165404961412936, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.4, global bounds=[-0,0], local bounds=[-0,0]
+  [binary] <t_>: obj=0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=0.393085791165083, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_>: obj=-0.1, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeSentence:0>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:1>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:2>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:3>: obj=-0.4, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeSentence:4>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:5>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:6>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:7>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:8>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:9>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:10>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:11>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:12>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:13>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:14>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:15>: obj=-0.4, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeSentence:16>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:17>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:18>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:19>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:20>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:21>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:22>: obj=-0.4, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeSentence:23>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:24>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:25>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:26>: obj=-0.4, global bounds=[-0,1], local bounds=[-0,1]
+  [binary] <t_activeSentence:27>: obj=-0.4, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeSentence:28>: obj=-0.4, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeSentence:29>: obj=-0.4, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeQuestionCons>: obj=-0.33, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeQuestionCons>: obj=-0.33, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeQuestionCons>: obj=-0.33, global bounds=[1,1], local bounds=[1,1]
+  [binary] <t_activeQuestionCons>: obj=-0.33, global bounds=[1,1], local bounds=[1,1]
 FIXED
-  [binary] <t_longerThanThreePenalty>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_longerThanTwoPenalty>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_longerThanOnePenalty>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_longerThanTwoPenalty>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_longerThanOnePenalty>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_longerThanTwoPenalty>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_longerThanOnePenalty>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsOptId3>: obj=-0, global bounds=[-0,-0], local bounds=[-0,-0], fixed:-0
-  [binary] <t_activeAnsOptId2>: obj=-0, global bounds=[-0,-0], local bounds=[-0,-0], fixed:-0
-  [binary] <t_activeAnsOptId1>: obj=-0, global bounds=[-0,-0], local bounds=[-0,-0], fixed:-0
-  [binary] <t_activeAnsOptId0>: obj=-0, global bounds=[-0,-0], local bounds=[-0,-0], fixed:-0
   [binary] <t_activeQuestionCons>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
   [binary] <t_activeQuestionCons>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
   [binary] <t_activeQuestionCons>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
   [binary] <t_activeQuestionCons>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeQuestionCons>: obj=0, global bounds=[-0,1], local bounds=[-0,1], aggregated: +1<t_>
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeSentence:0>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeSentence:1>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeQuestionCons>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_Relation:12>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_activeQuestionCons>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
   [binary] <t_Relation:0>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_Relation:1>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_Relation:2>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_Relation:3>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_Relation:4>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_Relation:5>: obj=0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:5>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:7>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
   [binary] <t_Relation:8>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_Relation:9>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[1,1], local bounds=[1,1], fixed:1
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
   [binary] <t_Relation:10>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
   [binary] <t_Relation:11>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeAnsweOptionPairs>: obj=-0, global bounds=[0,0], local bounds=[0,0], fixed:0
-  [binary] <t_activeQuestionCons>: obj=0, global bounds=[1,1], local bounds=[1,1], aggregated: +1<t_>
+  [binary] <t_Relation:15>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:16>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:17>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:18>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:21>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:24>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:25>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:26>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:27>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:30>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:32>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:33>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:34>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:35>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:36>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:38>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:40>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:41>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:43>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:45>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:47>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:49>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:50>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:51>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:53>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:54>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:56>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:58>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:60>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:61>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:62>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:64>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:66>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:67>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:68>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:69>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:72>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:73>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:76>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:77>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:80>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:81>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:83>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:84>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:86>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:87>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:89>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:91>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:92>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:93>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:94>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:96>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:99>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:101>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:103>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:104>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:106>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:108>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:109>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:110>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:112>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:117>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:119>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:120>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:121>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:123>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:126>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:127>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:131>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:132>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:133>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:135>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:136>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:137>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:140>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:141>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:142>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:143>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:145>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:146>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:149>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:150>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:151>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:152>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:153>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:154>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:156>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:157>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:158>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:159>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:162>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:164>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:166>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:167>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:168>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:170>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:171>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:172>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:173>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:177>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:178>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:180>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:181>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:184>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:185>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:187>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:188>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:190>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:191>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:192>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:194>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:195>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:197>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:198>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:200>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:201>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:205>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:207>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:208>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:210>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:211>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:213>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:214>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:215>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:216>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:219>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:223>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:225>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:227>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:228>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:229>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:232>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:234>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:235>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:236>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:237>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:238>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:239>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:240>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:241>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:242>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:243>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:246>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:247>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:248>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:249>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:252>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
+  [binary] <t_Relation:253>: obj=0, global bounds=[0,0], local bounds=[0,0], fixed:0
 CONSTRAINTS
-  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:0>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
-  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:1>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:3>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:5>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:2>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:9>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:9>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:4>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:3>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:5>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:1>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:8>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:10>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:4>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:8>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:10>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:1>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:2>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:11>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:12>[B] +<~t_>[B] <= 1;
+  [knapsack] <>: +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 3;
+  [knapsack] <>: +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 3;
+  [knapsack] <>: +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 3;
+  [knapsack] <>: +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 3;
+  [knapsack] <>: +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 3;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:22>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:15>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:6>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:12>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:29>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <maxActiveParagraphConsVar>: +1<t_activeSentence:0>[B] +1<t_activeSentence:1>[B] +1<t_activeSentence:2>[B] +1<t_activeSentence:3>[B] +1<t_activeSentence:4>[B] +1<t_activeSentence:5>[B] +1<t_activeSentence:6>[B] +1<t_activeSentence:7>[B] +1<t_activeSentence:8>[B] +1<t_activeSentence:9>[B] +1<t_activeSentence:10>[B] +1<t_activeSentence:11>[B] +1<t_activeSentence:12>[B] +1<t_activeSentence:13>[B] +1<t_activeSentence:14>[B] +1<t_activeSentence:15>[B] +1<t_activeSentence:16>[B] +1<t_activeSentence:17>[B] +1<t_activeSentence:18>[B] +1<t_activeSentence:19>[B] +1<t_activeSentence:20>[B] +1<t_activeSentence:21>[B] +1<t_activeSentence:22>[B] +1<t_activeSentence:23>[B] +1<t_activeSentence:24>[B] +1<t_activeSentence:25>[B] +1<t_activeSentence:26>[B] +1<t_activeSentence:27>[B] +1<t_activeSentence:28>[B] +1<t_activeSentence:29>[B] <= 15;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:28>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:27>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:26>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:17>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:23>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:21>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:20>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:19>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:18>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:4>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:16>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:13>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:2>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:10>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:9>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:8>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:0>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:7>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:5>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:3>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:1>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
+  [knapsack] <activeParagraphConsVar>: +8<~t_activeSentence:24>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] +1<t_>[B] <= 8;
   [setppc] <onlyOneActiveOption>:  +<t_activeAnsOptId0>[B] +<t_activeAnsOptId1>[B] +<t_activeAnsOptId2>[B] +<t_activeAnsOptId3>[B] == 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:0>[B] +<~t_>[B] <= 1;
-  [setppc] <activeQuestionConsVarNum>:  +<~t_activeQuestionCons>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:11>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:12>[B] +<~t_>[B] <= 1;
-  [setppc] <dependencyVariableActiveOnlyIfSourceConsIsActive>:  +<t_Relation:0>[B] +<~t_>[B] <= 1;
-  [and] <andgate_72>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_5>: <~t_activeSentence:1>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_30>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_22>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_48>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_27>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_41>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_29>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_65>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_26>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_25>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_75>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_33>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_160>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_71>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_34>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_117>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_56>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_42>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_49>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_55>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_110>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_157>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_163>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_156>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_164>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_153>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_64>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_28>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_21>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_23>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_3>: <~t_activeAnsOptId2>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_68>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_35>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_70>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_154>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_69>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_44>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_37>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_57>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_155>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_50>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_162>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_43>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_52>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_36>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_138>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_61>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_62>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_103>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_96>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_51>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_161>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_145>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_58>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_63>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_54>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_74>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_47>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_159>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_165>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_158>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_53>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_166>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_46>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_39>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_38>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_45>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_167>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_89>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_131>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_60>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_124>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_4>: <~t_activeAnsOptId1>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_67>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_40>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_66>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_82>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_73>: <~t_activeAnsweOptionPairs>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_2>: <~t_activeAnsOptId3>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_13>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_7>: <~t_activeAnsOptId0>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_59>: <~t_activeQuestionCons>[B] == and(<~t_>[B],<~t_>[B]);
-  [and] <andgate_8>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [and] <andgate_12>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:0>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:1>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:5>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:12>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:11>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:8>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:10>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:9>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:2>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:3>[B]);
-  [logicor] <atLeastOnePairShouldBeActive>: logicor(<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<t_activeAnsweOptionPairs>[B],<~t_Relation:4>[B]);
-  [logicor] <andgate_1>: logicor(<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B],<t_>[B]);
+  [and] <andgate_5>: <~t_activeSentence:22>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_51>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_35>: <~t_activeQuestionCons>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_15>: <~t_activeSentence:15>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_43>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_21>: <~t_activeSentence:6>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_36>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_78>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_47>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_37>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_6>: <~t_activeSentence:29>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_1>: <~t_activeAnsOptId0>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_178>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_114>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_126>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_212>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_45>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_55>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_8>: <~t_activeSentence:8>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_20>: <~t_activeSentence:28>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_39>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_63>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_160>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_109>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_190>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_66>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_11>: <~t_activeSentence:27>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_86>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_52>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_145>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_199>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_50>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_42>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_22>: <~t_activeSentence:26>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_90>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_121>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_125>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_101>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_64>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_33>: <~t_activeSentence:25>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_76>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_61>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_85>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_48>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_40>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_150>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_116>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_12>: <~t_activeSentence:17>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_213>: <~t_activeQuestionCons>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_119>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_27>: <~t_activeSentence:23>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_62>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_31>: <~t_activeQuestionCons>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_83>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_57>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_38>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_173>: <~t_activeQuestionCons>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_140>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_103>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_23>: <~t_activeSentence:2>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_171>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_65>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_111>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_193>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_208>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_155>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_79>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_13>: <~t_activeSentence:21>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_176>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_54>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_147>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_198>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_184>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_70>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_58>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_25>: <~t_activeSentence:20>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_112>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_106>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_69>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_170>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_196>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_26>: <~t_activeSentence:19>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_67>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_168>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_175>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_191>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_87>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_4>: <~t_activeSentence:18>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_28>: <~t_activeSentence:7>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_206>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_123>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_68>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_139>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_203>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_142>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_9>: <~t_activeSentence:5>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_136>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_187>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_2>: <~t_activeAnsOptId2>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_72>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_194>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_189>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_3>: <~t_activeAnsOptId3>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_17>: <~t_activeSentence:4>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_124>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_73>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_182>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_104>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_108>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_24>: <~t_activeSentence:16>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_143>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_82>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_174>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_180>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_53>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_141>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_152>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_205>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_131>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_93>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_32>: <~t_activeSentence:14>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_153>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_30>: <~t_activeSentence:13>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_162>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_165>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_157>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_16>: <~t_activeSentence:12>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_41>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_7>: <~t_activeSentence:0>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_94>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_46>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_135>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_49>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_107>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_34>: <~t_activeSentence:11>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_60>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_56>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_19>: <~t_activeSentence:10>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_88>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_10>: <~t_activeSentence:3>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_202>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_130>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_138>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_183>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_18>: <~t_activeSentence:9>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_59>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_105>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_44>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_29>: <~t_activeSentence:1>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_92>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_149>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_89>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_14>: <~t_activeSentence:24>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_159>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_201>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_99>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_167>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_120>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_129>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_197>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_95>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_117>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_122>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_181>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_132>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_81>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_154>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_0>: <~t_activeAnsOptId1>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_148>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_146>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_84>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_207>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_127>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_77>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_177>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_97>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_158>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_179>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_98>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_188>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_210>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_100>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_91>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_169>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_192>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_209>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_211>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_200>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_186>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_151>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_161>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_195>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_75>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_163>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_172>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_80>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_96>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_185>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_128>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_204>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_137>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_113>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_74>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_133>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_115>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_118>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_110>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_71>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_166>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_134>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_164>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_156>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_144>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [and] <andgate_102>: <~t_>[B] == and(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [logicor] <>: logicor(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [logicor] <>: logicor(<~t_>[B],<~t_>[B],<~t_>[B],<~t_>[B]);
+  [logicor] <activeQuestionConsVarNum>: logicor(<t_activeQuestionCons>[B],<t_activeQuestionCons>[B],<t_activeQuestionCons>[B],<t_activeQuestionCons>[B]);
 END
