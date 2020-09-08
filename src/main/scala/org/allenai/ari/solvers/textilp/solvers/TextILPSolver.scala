@@ -1027,6 +1027,21 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val qTokens = if (qTA.hasView(ViewNames.SHALLOW_PARSE)) qTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
     val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
 
+    val para = pTA.toString
+    val sents = para.split("\\.")
+    val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
+    sents.foreach{ elem1 =>
+      val smalllist = scala.collection.mutable.MutableList.empty[Constituent]
+      pTokens.foreach{ elem2 =>
+
+        if (elem1 contains elem2) {
+          smalllist += elem2
+        }
+      }
+      biglist +=smalllist
+    }
+
+
     def getParagraphConsCovering(c: Constituent): Option[Constituent] = {
       p.contextTAOpt.get.getView(ViewNames.SHALLOW_PARSE).getConstituentsCovering(c).asScala.headOption
     }
