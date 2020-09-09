@@ -1093,7 +1093,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         // TODO: make it QuestionCell score
         //      score = alignmentFunction.scoreCellCell(qCons.getSurfaceForm, pCons.getSurfaceForm) + params.questionCellOffset
         score = alignmentFunction.scoreCellQCons(pCons.getSurfaceForm, qCons.getSurfaceForm) + params.questionCellOffset
-        if score > params.minParagraphToQuestionAlignmentScore
+       // if score > params.minParagraphToQuestionAlignmentScore
         x = ilpSolver.createBinaryVar("", score)
       } yield (qCons, pCons, x)
 
