@@ -1034,7 +1034,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val smalllist = scala.collection.mutable.MutableList.empty[Constituent]
       pTokens.foreach{ elem2 =>
 
-        if (elem1 contains elem2) {
+        if (elem1 contains elem2.toString) {
           smalllist += elem2
         }
       }
@@ -1484,6 +1484,42 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       val sentences = p.context.split("\\.")
       val activeSentList = sentList.map(sentences(_)).mkString(",")
+
+      val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
+      val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
+
+      val sents = p.context.split("\\.")
+      val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
+      sents.foreach{ elem1 =>
+        val smalllist = scala.collection.mutable.MutableList.empty[Constituent]
+        pTokens.foreach{ elem2 =>
+
+          if (elem1 contains elem2.toString) {
+            smalllist += elem2
+          }
+        }
+        biglist +=smalllist
+      }
+
+      val Entscores = scala.collection.mutable.MutableList.empty[Any]
+
+      questionParagraphAlignments.foreach{
+        case(c1,c2,x) =>
+            Entscores += ilpSolver.getVarObjCoeff(x)
+          }
+
+      val sentScores = scala.collection.mutable.MutableList.empty[Any]
+      var i = 0
+        biglist.foreach { sentCons =>
+          var score = 0.0
+          sentCons.foreach { cons=>
+            score = score + Entscores(i)
+            i += 1
+            }
+          sentScores += score
+
+        }
+        
 
 
       questionParagraphAlignments.foreach {
