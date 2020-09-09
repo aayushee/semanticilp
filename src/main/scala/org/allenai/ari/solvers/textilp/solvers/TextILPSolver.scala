@@ -1027,18 +1027,13 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val qTokens = if (qTA.hasView(ViewNames.SHALLOW_PARSE)) qTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
     val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
 
-    val para = pTA.toString
-    val sents = para.split("\\.")
-    val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
-    sents.foreach{ elem1 =>
-      val smalllist = scala.collection.mutable.MutableList.empty[Constituent]
-      pTokens.foreach{ elem2 =>
 
-        if (elem1 contains elem2.toString) {
-          smalllist += elem2
-        }
-      }
-      biglist +=smalllist
+    val sents=p.context.split("\\.")
+    val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
+
+    sents.foreach { sent =>
+      val sentTokens = sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
+      biglist +=sentTokens
     }
 
 
@@ -1485,20 +1480,11 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val sentences = p.context.split("\\.")
       val activeSentList = sentList.map(sentences(_)).mkString(",")
 
-      val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
-      val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
-
-      val sents = p.context.split("\\.")
       val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
-      sents.foreach{ elem1 =>
-        val smalllist = scala.collection.mutable.MutableList.empty[Constituent]
-        pTokens.foreach{ elem2 =>
 
-          if (elem1 contains elem2.toString) {
-            smalllist += elem2
-          }
-        }
-        biglist +=smalllist
+      sentences.foreach { sent =>
+        val sentTokens = sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
+        biglist +=sentTokens
       }
 
       val Entscores = scala.collection.mutable.MutableList.empty[Double]
@@ -1510,7 +1496,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       val listofscores = scala.collection.mutable.MutableList.empty[Double]
       var i = 0
-        biglist.foreach { sentCons =>
+      biglist.foreach { sentCons =>
           var score = 0.0
           sentCons.foreach { cons=>
             score = score + Entscores(i)
