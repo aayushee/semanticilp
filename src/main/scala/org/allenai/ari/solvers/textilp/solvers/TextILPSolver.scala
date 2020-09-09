@@ -1501,14 +1501,14 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         biglist +=smalllist
       }
 
-      val Entscores = scala.collection.mutable.MutableList.empty[Any]
+      val Entscores = scala.collection.mutable.MutableList.empty[Double]
 
       questionParagraphAlignments.foreach{
         case(c1,c2,x) =>
             Entscores += ilpSolver.getVarObjCoeff(x)
           }
 
-      val sentScores = scala.collection.mutable.MutableList.empty[Any]
+      val listofscores = scala.collection.mutable.MutableList.empty[Double]
       var i = 0
         biglist.foreach { sentCons =>
           var score = 0.0
@@ -1516,8 +1516,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
             score = score + Entscores(i)
             i += 1
             }
-          sentScores += score
-
+          listofscores += score
         }
         
 
