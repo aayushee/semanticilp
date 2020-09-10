@@ -1494,17 +1494,27 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
             Entscores += ilpSolver.getVarObjCoeff(x)
           }
 
+      val ant_question = annotationUtils.annotateWithEverything(q.questionText)
+      val quesCons = ant_question.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
+
       val listofscores = scala.collection.mutable.MutableList.empty[Double]
       var i = 0
-      biglist.foreach { sentCons =>
+      quesCons.foreach { qCons =>
+        biglist.foreach { sentCons =>
           var score = 0.0
-          sentCons.foreach { cons=>
+          sentCons.foreach { cons =>
             score = score + Entscores(i)
             i += 1
-            }
+          }
           listofscores += score
         }
-        
+      }
+      val Entscores2 = scala.collection.mutable.MutableList.empty[Double]
+
+      paragraphAnswerAlignments.foreach{
+        case(c1,a1,a2,x) =>
+          Entscores2 += ilpSolver.getVarObjCoeff(x)
+      }
 
 
       questionParagraphAlignments.foreach {
