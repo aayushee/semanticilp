@@ -1028,14 +1028,18 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
 
 
-   /* val sents=p.context.split("\\.")
-    val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
+    val sents=p.context.split("\\.")
+    /*val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
 
     sents.foreach { sent =>
       val sentTokens = sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
       biglist +=sentTokens
     }*/
-
+    sents.foreach{ sent=>
+      val ant_sent = annotationUtils.annotateWithEverything(sent)
+      val depView = ant_sent.getView(ViewNames.DEPENDENCY_STANFORD)
+      val sentRelations = depView.getRelations.asScala
+    }
 
     def getParagraphConsCovering(c: Constituent): Option[Constituent] = {
       p.contextTAOpt.get.getView(ViewNames.SHALLOW_PARSE).getConstituentsCovering(c).asScala.headOption
@@ -1509,6 +1513,21 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           listofscores += score
         }
       }
+
+      val sentScores = scala.collection.mutable.MutableList.empty[Double]
+      //var sum_elem = 0
+      var j = 0
+      val num=sentences.length
+      for (i <- 0 to num) {
+         var sum_elem = 0
+         j = i
+      while (j < listofscores.length ) {
+        sum_elem = sum_elem + listofscores[j]
+        j = j+ num
+      }
+        sentScores +=sum_elem
+      }
+
       val Entscores2 = scala.collection.mutable.MutableList.empty[Double]
 
       paragraphAnswerAlignments.foreach{
@@ -1516,6 +1535,22 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           Entscores2 += ilpSolver.getVarObjCoeff(x)
       }
 
+      val listofscores2 = scala.collection.mutable.MutableList.empty[Double]
+      var k = 0
+        biglist.foreach { sentCons =>
+          var score = 0.0
+          sentCons.foreach { cons =>
+            aTokens.foreach{ atok=>
+            score = score + Entscores2(k)
+            k += 1
+          }
+          }
+          listofscores2 += score
+        }
+
+      val finalSentScores = (sentScores, listofscores2).zipped.map(_ + _)
+      val zippedSenScores =(sentences zip finalSentScores).toMap
+      val sortedMap = zippedSenScores.toSeq.sortBy(_._2):_*
 
       questionParagraphAlignments.foreach {
         case (c1, c2, x) =>
@@ -1657,7 +1692,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
         " activeSentences: " + activeSentList +
-        "  aTokens: " + aTokens.toString
+        "  aTokens: " + aTokens.toString +
+      " scoredSentences: " + sortedMap.toString
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
         confidence = ilpSolver.getPrimalbound, log = solvedAnswerLog, statistics = statistics)
