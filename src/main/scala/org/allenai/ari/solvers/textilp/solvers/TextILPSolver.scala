@@ -1519,10 +1519,10 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       var j = 0
       val num=sentences.length
       for (i <- 0 to num) {
-         var sum_elem = 0
+         var sum_elem = 0.0
          j = i
       while (j < listofscores.length ) {
-        sum_elem = sum_elem + listofscores[j]
+        sum_elem = sum_elem + listofscores(j)
         j = j+ num
       }
         sentScores +=sum_elem
@@ -1550,7 +1550,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       val finalSentScores = (sentScores, listofscores2).zipped.map(_ + _)
       val zippedSenScores =(sentences zip finalSentScores).toMap
-      val sortedMap = zippedSenScores.toSeq.sortBy(_._2):_*
+      val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
+
 
       questionParagraphAlignments.foreach {
         case (c1, c2, x) =>
