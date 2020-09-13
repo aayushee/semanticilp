@@ -1035,11 +1035,13 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val sentTokens = sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
       biglist +=sentTokens
     }*/
+    val sentRelations = scala.collection.mutable.MutableList.empty[Any]
     sents.foreach{ sent=>
       val ant_sent = annotationUtils.annotateWithEverything(sent)
       val depView = ant_sent.getView(ViewNames.DEPENDENCY_STANFORD)
-      val sentRelations = depView.getRelations.asScala
+      sentRelations += depView.getRelations.asScala
     }
+
 
     def getParagraphConsCovering(c: Constituent): Option[Constituent] = {
       p.contextTAOpt.get.getView(ViewNames.SHALLOW_PARSE).getConstituentsCovering(c).asScala.headOption
@@ -1493,12 +1495,16 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       val Entscores = scala.collection.mutable.MutableList.empty[Double]
 
-      questionParagraphAlignments.foreach{
-        case(c1,c2,x) =>
+      questionParagraphAlignments.foreach {
+        case (c1, c2, x) =>
+          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
             Entscores += ilpSolver.getVarObjCoeff(x)
-          }
+          else
+            Entscores += 0.0
+      }
 
-      val ant_question = annotationUtils.annotateWithEverything(q.questionText)
+
+          val ant_question = annotationUtils.annotateWithEverything(q.questionText)
       val quesCons = ant_question.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
 
       val listofscores = scala.collection.mutable.MutableList.empty[Double]
@@ -1532,7 +1538,10 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       paragraphAnswerAlignments.foreach{
         case(c1,a1,a2,x) =>
-          Entscores2 += ilpSolver.getVarObjCoeff(x)
+          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
+            Entscores2 += ilpSolver.getVarObjCoeff(x)
+            else
+            Entscores2 += 0.0
       }
       val allAnsTokens=aTokens.flatten
       val listofscores2 = scala.collection.mutable.MutableList.empty[Double]
