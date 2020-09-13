@@ -1518,7 +1518,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       //var sum_elem = 0
       var j = 0
       val num=sentences.length
-      for (i <- 0 to num) {
+      for (i <- 0 to num-1) {
          var sum_elem = 0.0
          j = i
       while (j < listofscores.length ) {
@@ -1534,13 +1534,13 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         case(c1,a1,a2,x) =>
           Entscores2 += ilpSolver.getVarObjCoeff(x)
       }
-
+      val allAnsTokens=aTokens.flatten
       val listofscores2 = scala.collection.mutable.MutableList.empty[Double]
       var k = 0
         biglist.foreach { sentCons =>
           var score = 0.0
           sentCons.foreach { cons =>
-            aTokens.foreach{ atok=>
+            allAnsTokens.foreach{ atok=>
             score = score + Entscores2(k)
             k += 1
           }
