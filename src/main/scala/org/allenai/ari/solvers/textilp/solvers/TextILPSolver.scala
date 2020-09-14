@@ -1028,7 +1028,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
 
 
-    val sents=p.context.split("\\.")
+    val sents=p.contextTAOpt.split("\\.")
     val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
 
     sents.foreach { sent =>
