@@ -1028,11 +1028,12 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
 
 
-    val sents=p.contextTAOpt.split("\\.")
-    val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Constituent]]
+    val sents=p.context.split("\\.")
+    val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.Buffer[Constituent]]
 
     sents.foreach { sent =>
-      val sentTokens = sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
+      val ant_sent = annotationUtils.annotateWithEverything(sent)
+      val sentTokens = ant_sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
       biglist +=sentTokens
     }
     val sentRelations = scala.collection.mutable.MutableList.empty[Any]
