@@ -1025,17 +1025,18 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val qTA = q.qTAOpt.getOrElse(throw new Exception("The annotation for the question not found . . . "))
     val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
     val qTokens = if (qTA.hasView(ViewNames.SHALLOW_PARSE)) qTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
-    val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
+   // val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
 
 
     val sents=p.context.split("\\.")
-    val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.Buffer[Constituent]]
-
+    val biglist = scala.collection.mutable.Buffer.empty[scala.collection.mutable.Buffer[Constituent]]
+    //val pTokens = scala.collection.mutable.MutableList.empty[Constituent]
     sents.foreach { sent =>
       val ant_sent = annotationUtils.annotateWithEverything(sent)
       val sentTokens = ant_sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
       biglist +=sentTokens
     }
+    val pTokens = biglist.flatten
     val sentRelations = scala.collection.mutable.MutableList.empty[Any]
     sents.foreach{ sent=>
       val ant_sent = annotationUtils.annotateWithEverything(sent)
