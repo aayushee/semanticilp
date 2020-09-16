@@ -1036,13 +1036,13 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val sentTokens = ant_sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
       biglist +=sentTokens
     }
-    val pTokens = biglist.flatten
-    val sentRelations = scala.collection.mutable.MutableList.empty[Any]
+    val pTokens = biglist.flatten.toList
+   /* val sentRelations = scala.collection.mutable.MutableList.empty[Any]
     sents.foreach{ sent=>
       val ant_sent = annotationUtils.annotateWithEverything(sent)
       val depView = ant_sent.getView(ViewNames.DEPENDENCY_STANFORD)
       sentRelations += depView.getRelations.asScala
-    }
+    }*/
 
 
     def getParagraphConsCovering(c: Constituent): Option[Constituent] = {
@@ -1558,9 +1558,9 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           }
           listofscores2 += score
         }
-
+      val sentindexes = (0 to sentences.length-1).toList
       val finalSentScores = (sentScores, listofscores2).zipped.map(_ + _)
-      val zippedSenScores =(sentences zip finalSentScores).toMap
+      val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
 
 
@@ -1697,15 +1697,16 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }*/
 
       if (verbose) println("returning the answer  . . . ")
-
-      val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
+      val solvedAnswerLog = sortedMap.toString
+   /*   val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
       //  "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
         " activeSentences: " + activeSentList +
         "  aTokens: " + aTokens.toString +
-      " scoredSentences: " + sortedMap.toString
+      " scoredSentences: " + sortedMap.toString */
+
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
         confidence = ilpSolver.getPrimalbound, log = solvedAnswerLog, statistics = statistics)
