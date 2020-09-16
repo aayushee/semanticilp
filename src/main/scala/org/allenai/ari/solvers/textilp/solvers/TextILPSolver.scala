@@ -1233,7 +1233,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         }
       }
 
-      if (p.contextTAOpt.get.hasView(ViewNames.DEPENDENCY_STANFORD)) {
+    /*  if (p.contextTAOpt.get.hasView(ViewNames.DEPENDENCY_STANFORD)) {
         val depView = p.contextTAOpt.get.getView(ViewNames.DEPENDENCY_STANFORD)
         val depRelations = depView.getRelations.asScala
         interParagraphAlignments = depRelations.zipWithIndex.map { case (r, idx) =>
@@ -1287,7 +1287,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
       else {
         println("Paragraph does not contain parse-view . . . ")
-      }
+      } */
 
       // there is an upper-bound on the max number of active tokens in each sentence
       activeSentences.foreach { case (ans, x) =>
@@ -1642,7 +1642,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
       // inter-paragraph alignments
-      interParagraphAlignments.foreach { case (c1, c2, x) =>
+    /*  interParagraphAlignments.foreach { case (c1, c2, x) =>
         if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
           val pBeginIndex1 = c1.getStartCharOffset + questionString.length + paragraphBeginning.length
           val pEndIndex1 = pBeginIndex1 + c1.getSurfaceForm.length
@@ -1694,12 +1694,12 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
             }
           }
         }
-      }
+      }*/
 
       if (verbose) println("returning the answer  . . . ")
 
       val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
-        "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
+      //  "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
