@@ -1697,15 +1697,15 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }*/
 
       if (verbose) println("returning the answer  . . . ")
-      val solvedAnswerLog = sortedMap.toString
-   /*   val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
+      //val solvedAnswerLog = sortedMap.toString
+      val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
       //  "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
         " activeSentences: " + activeSentList +
         "  aTokens: " + aTokens.toString +
-      " scoredSentences: " + sortedMap.toString */
+      " scoredSentences: " + sortedMap.toString
 
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
