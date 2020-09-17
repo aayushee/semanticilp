@@ -1328,7 +1328,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
 
-      val finalSentScores = (sentScores, listofscores2).zipped.map(_ + _)
+      val finalSentScores = (sentScores, listofscores2, listofscores3).zipped.map(_ + _ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
 
@@ -1466,8 +1466,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
       if (verbose) println("returning the answer  . . . ")
-     // val solvedAnswerLog = sortedMap.toString
-      val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
+      val solvedAnswerLog = sortedMap.toString
+      /*val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
         "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
@@ -1475,7 +1475,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         " activeSentences: " + activeSentList +
         "  aTokens: " + aTokens.toString +
       " scoredSentences: " + sortedMap.toString +
-      "interParaScores: " + listofscores3
+      "interParaScores: " + listofscores3*/
 
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
