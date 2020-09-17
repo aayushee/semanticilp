@@ -1297,6 +1297,37 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           }
           listofscores2 += score
         }
+      val interParaRelations= scala.collection.mutable.MutableList.empty[Int]
+      val interParaScores= scala.collection.mutable.MutableList.empty[Double]
+
+      interParagraphAlignments.foreach{
+        case(c1,c2,x)=>
+          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
+            interParaRelations +=c1.getSentenceId
+            interParaScores +=ilpSolver.getVarObjCoeff(x)
+          }
+      }
+
+      val anotherlist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Int]]
+
+      sentindexes.foreach{sent=>
+        val sentRelations = interParaRelations.filter(_ == sent)
+        anotherlist += sentRelations
+      }
+      val listofscores3 = scala.collection.mutable.MutableList.empty[Double]
+
+      var l = 0
+      anotherlist.foreach { sentreln =>
+        var score = 0.0
+        sentreln.foreach { cons =>
+            score = score + interParaScores(l)
+            l += 1
+
+        }
+        listofscores3 += score
+      }
+
+
       val finalSentScores = (sentScores, listofscores2).zipped.map(_ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
@@ -1435,15 +1466,16 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
       if (verbose) println("returning the answer  . . . ")
-      val solvedAnswerLog = sortedMap.toString
-     /* val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
+     // val solvedAnswerLog = sortedMap.toString
+      val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
         "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
         " activeSentences: " + activeSentList +
         "  aTokens: " + aTokens.toString +
-      " scoredSentences: " + sortedMap.toString*/
+      " scoredSentences: " + sortedMap.toString +
+      "interParaScores: " + listofscores3
 
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
