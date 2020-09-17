@@ -255,153 +255,20 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
   lazy val aligner = new AlignmentFunction("Entailment", 0.0,
     TextILPSolver.keywordTokenizer, useRedisCache = false, useContextInRedisCache = false)
 
-  def SRLSolverV1WithAllViews(q: Question, p: Paragraph): (Seq[Int], EntityRelationResult) = {
-    lazy val srlVerbPipeline = SRLSolverV1(q, p, ViewNames.SRL_VERB)
-    lazy val srlVerbCurator = SRLSolverV1(q, p, TextILPSolver.curatorSRLViewName)
-    if (srlVerbPipeline._1.nonEmpty) {
-      srlVerbPipeline
-    }
-    else if (srlVerbCurator._1.nonEmpty) {
-      srlVerbCurator
-    }
-    else {
-      SRLSolverV1(q, p, TextILPSolver.pathLSTMViewName)
-    }
-  }
-
-  def SRLSolverV2WithAllViews(q: Question, p: Paragraph): (Seq[Int], EntityRelationResult) = {
-    lazy val srlVerbPipeline = SRLSolverV2(q, p, ViewNames.SRL_VERB)
-    lazy val srlVerbCurator = SRLSolverV2(q, p, TextILPSolver.curatorSRLViewName)
-    if (srlVerbPipeline._1.nonEmpty) {
-      srlVerbPipeline
-    }
-    else if (srlVerbCurator._1.nonEmpty) {
-      srlVerbCurator
-    }
-    else {
-      SRLSolverV2(q, p, TextILPSolver.pathLSTMViewName)
-    }
-  }
-
-  def SRLSolverV3WithAllViews(q: Question, p: Paragraph, alignmentFunction: AlignmentFunction): (Seq[Int], EntityRelationResult) = {
-    lazy val srlVerbPipeline = SRLSolverV3(q, p, alignmentFunction, ViewNames.SRL_VERB)
-    lazy val srlVerbCurator = try {
-      // because curator annotation stuff fail sometime
-      SRLSolverV3(q, p, alignmentFunction, TextILPSolver.curatorSRLViewName)
-    }
-    catch {
-      case e: Exception => e.printStackTrace()
-        SRLSolverV3(q, p, alignmentFunction, TextILPSolver.pathLSTMViewName)
-    }
-
-    if (srlVerbPipeline._1.nonEmpty) {
-      srlVerbPipeline
-    }
-    else if (srlVerbCurator._1.nonEmpty) {
-      srlVerbCurator
-    }
-    else {
-      SRLSolverV3(q, p, alignmentFunction, TextILPSolver.pathLSTMViewName)
-    }
-  }
 
   def solve(question: String, options: Seq[String], snippet: String): (Seq[Int], EntityRelationResult) = {
     val (q: Question, p: Paragraph) = preprocessQuestionData(question, options, snippet)
     require(p.contextTAOpt.isDefined, "pTA is not defined after pre-processing . . . ")
     require(q.qTAOpt.isDefined, "qTA is not defined after pre-processing . . . ")
     println("Reasoning methods . . . ")
-    lazy val resultSRLV1_path_lstm = SRLSolverV1(q, p, TextILPSolver.pathLSTMViewName) -> "resultSRLV1_path_lstm"
-    lazy val resultSRLV1_curator = SRLSolverV1(q, p, TextILPSolver.curatorSRLViewName) -> "resultSRLV1_curator"
-    lazy val resultSRLV1_pipeline = SRLSolverV1(q, p, ViewNames.SRL_VERB) -> "resultSRLV1_pipeline"
 
-    lazy val resultSRLV2_path_lstm = SRLSolverV2(q, p, TextILPSolver.pathLSTMViewName) -> "resultSRLV2_path_lstm"
-    lazy val resultSRLV2_curator = SRLSolverV2(q, p, TextILPSolver.curatorSRLViewName) -> "resultSRLV2_curator"
-    lazy val resultSRLV2_pipeline = SRLSolverV2(q, p, ViewNames.SRL_VERB) -> "resultSRLV2_pipeline"
-
-    lazy val resultSRLV3_path_lstm = SRLSolverV3(q, p, aligner, TextILPSolver.pathLSTMViewName) -> "resultSRLV3_path_lstm"
-    lazy val resultSRLV3_curator = SRLSolverV3(q, p, aligner, TextILPSolver.curatorSRLViewName) -> "resultSRLV3_curator"
-    lazy val resultSRLV3_pipeline = SRLSolverV3(q, p, aligner, ViewNames.SRL_VERB) -> "resultSRLV3_pipeline"
-
-    lazy val resultWhatDoesItdo = WhatDoesItDoSolver(q, p) -> "resultWhatDoesItdo"
-    lazy val resultCause = CauseResultRules(q, p) -> "resultCause"
-    lazy val resultVerbSRLPlusCommaSRL_pipelneSRL = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandCommaSRL), useSummary = true, ViewNames.SRL_VERB)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusCommaSRL_pipeline_srl"
-    lazy val resultVerbSRLPlusCommaSRL_curatorSRL = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandCommaSRL), useSummary = true, TextILPSolver.curatorSRLViewName)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusCommaSRL_curator_srl"
-    lazy val resultVerbSRLPlusCommaSRL_pathLSTM = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandCommaSRL), useSummary = true, TextILPSolver.pathLSTMViewName)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusCommaSRL"
     lazy val resultSimpleMatching = {
       val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
       val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(SimpleMatching), useSummary = true, TextILPSolver.pathLSTMViewName)
       ilpSolver.free()
       result
     } -> "resultILP"
-    lazy val resultVerbSRLPlusCoref_pipelineSRL = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandCoref), useSummary = true, ViewNames.SRL_VERB)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusCoref_pipeline_srl"
-    lazy val resultVerbSRLPlusCoref_curatorSRL = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandCoref), useSummary = true, TextILPSolver.curatorSRLViewName)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusCoref_curator_srl"
-    lazy val resultVerbSRLPlusCoref_pathLSTM = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandCoref), useSummary = true, TextILPSolver.pathLSTMViewName)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusCoref_path_lstm"
-    lazy val resultVerbSRLPlusPrepSRL_pipeline_srl = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandPrepSRL), useSummary = true, ViewNames.SRL_VERB)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusPrepSRL_pipeline_srl"
-    lazy val resultVerbSRLPlusPrepSRL_curator_srl = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandPrepSRL), useSummary = true, TextILPSolver.curatorSRLViewName)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusPrepSRL_curator_srl"
-    lazy val resultVerbSRLPlusPrepSRL_path_lstm = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(VerbSRLandPrepSRL), useSummary = true, TextILPSolver.pathLSTMViewName)
-      ilpSolver.free()
-      result
-    } -> "resultVerbSRLPlusPrepSRL_path_lstm"
-    lazy val srlV1ILP_pipeline_srl = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(SRLV1ILP), useSummary = false, ViewNames.SRL_VERB)
-      ilpSolver.free()
-      result
-    } -> "srlV1ILP_pipeline_srl"
-    lazy val srlV1ILP_curator_srl = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(SRLV1ILP), useSummary = false, TextILPSolver.curatorSRLViewName)
-      ilpSolver.free()
-      result
-    } -> "srlV1ILP_curator_srl"
-    lazy val srlV1ILP_path_lstm = {
-      val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-      val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(SRLV1ILP), useSummary = false, TextILPSolver.pathLSTMViewName)
-      ilpSolver.free()
-      result
-    } -> "srlV1ILP_path_lstm"
+
 
     val resultOpt = Constants.textILPModel match {
       case TextILPModel.MyModel =>
@@ -409,150 +276,13 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           println("trying: " + t._2)
           t._1._1.nonEmpty
         }
-      case TextILPModel.StackedForScience =>
-/*
-        (resultVerbSRLPlusCoref_curatorSRL #:: resultVerbSRLPlusCommaSRL_pathLSTM #:: resultSRLV3_curator #::
-          resultVerbSRLPlusCommaSRL_curatorSRL #:: resultVerbSRLPlusCommaSRL_pipelneSRL #:: resultSRLV3_pipeline #::
-          srlV1ILP_curator_srl #:: srlV1ILP_pipeline_srl #:: resultSRLV3_path_lstm #:: resultVerbSRLPlusCoref_pathLSTM #::
-          resultVerbSRLPlusPrepSRL_path_lstm #:: resultVerbSRLPlusPrepSRL_pipeline_srl #:: resultVerbSRLPlusCoref_pipelineSRL #::
-          srlV1ILP_path_lstm #:: resultSRLV1_curator #:: resultSimpleMatching #:: Stream.empty).find { t =>
-          t._1._1.nonEmpty
-        }
-*/
-        // no coref
-//        (resultVerbSRLPlusCommaSRL_pathLSTM #:: resultSRLV3_curator #::
-//          resultVerbSRLPlusCommaSRL_curatorSRL #:: resultVerbSRLPlusCommaSRL_pipelneSRL #:: resultSRLV3_pipeline #::
-//          srlV1ILP_curator_srl #:: srlV1ILP_pipeline_srl #:: resultSRLV3_path_lstm #::
-//          resultVerbSRLPlusPrepSRL_path_lstm #:: resultVerbSRLPlusPrepSRL_pipeline_srl #::
-//          srlV1ILP_path_lstm #:: resultSRLV1_curator #:: resultSimpleMatching #:: Stream.empty).find { t =>
-//          t._1._1.nonEmpty
-//        }
 
-         // no prep
-//        (resultVerbSRLPlusCoref_curatorSRL #:: resultVerbSRLPlusCommaSRL_pathLSTM #:: resultSRLV3_curator #::
-//          resultVerbSRLPlusCommaSRL_curatorSRL #:: resultVerbSRLPlusCommaSRL_pipelneSRL #:: resultSRLV3_pipeline #::
-//          srlV1ILP_curator_srl #:: srlV1ILP_pipeline_srl #:: resultSRLV3_path_lstm #:: resultVerbSRLPlusCoref_pathLSTM #::
-//          resultVerbSRLPlusCoref_pipelineSRL #::
-//          srlV1ILP_path_lstm #:: resultSRLV1_curator #:: resultSimpleMatching #:: Stream.empty).find { t =>
-//          t._1._1.nonEmpty
-//        }
-//
-//        // no simple matching
-        (resultVerbSRLPlusCoref_curatorSRL #:: resultVerbSRLPlusCommaSRL_pathLSTM #:: resultSRLV3_curator #::
-          resultVerbSRLPlusCommaSRL_curatorSRL #:: resultVerbSRLPlusCommaSRL_pipelneSRL #:: resultSRLV3_pipeline #::
-          srlV1ILP_curator_srl #:: srlV1ILP_pipeline_srl #:: resultSRLV3_path_lstm #:: resultVerbSRLPlusCoref_pathLSTM #::
-          resultVerbSRLPlusPrepSRL_path_lstm #:: resultVerbSRLPlusPrepSRL_pipeline_srl #:: resultVerbSRLPlusCoref_pipelineSRL #::
-          srlV1ILP_path_lstm #:: resultSRLV1_curator #:: Stream.empty).find { t =>
-          t._1._1.nonEmpty
-        }
-      case TextILPModel.StackedForScienceMinimal =>
-        // same mode as the previous one, with some curator components dropped
-        (resultVerbSRLPlusCommaSRL_pathLSTM #:: resultVerbSRLPlusCommaSRL_pipelneSRL #:: resultSRLV3_pipeline #::
-          srlV1ILP_pipeline_srl #:: resultSRLV3_path_lstm #:: resultVerbSRLPlusCoref_pathLSTM #::
-          resultVerbSRLPlusPrepSRL_path_lstm #:: resultVerbSRLPlusPrepSRL_pipeline_srl #:: resultVerbSRLPlusCoref_pipelineSRL #::
-          srlV1ILP_path_lstm #:: resultSimpleMatching #:: Stream.empty).find { t =>
-          println("trying: " + t._2)
-          t._1._1.nonEmpty
-        }
-      case TextILPModel.StackedForProcesses =>
-        (resultWhatDoesItdo #:: resultCause #:: resultSRLV3_curator #:: resultSRLV3_path_lstm #::
-          resultSRLV3_path_lstm #:: srlV1ILP_pipeline_srl #:: resultSRLV3_path_lstm #:: resultSRLV3_pipeline #::
-          srlV1ILP_path_lstm #:: resultVerbSRLPlusPrepSRL_path_lstm #::
-          srlV1ILP_curator_srl #:: srlV1ILP_path_lstm #:: resultVerbSRLPlusCoref_pathLSTM #::
-          resultVerbSRLPlusPrepSRL_path_lstm #:: resultVerbSRLPlusCommaSRL_pathLSTM #:: resultSimpleMatching #:: Stream.empty).find { t =>
-          println("trying: " + t._2)
-          t._1._1.nonEmpty
-        }
-      case TextILPModel.StackedForProcessesMinimal =>
-        (resultWhatDoesItdo #:: resultCause #:: resultSRLV3_path_lstm #::
-          resultSRLV3_path_lstm #:: srlV1ILP_pipeline_srl #:: resultSRLV3_path_lstm #:: resultSRLV3_pipeline #::
-          srlV1ILP_path_lstm #:: resultVerbSRLPlusPrepSRL_path_lstm #::
-          srlV1ILP_path_lstm #:: resultVerbSRLPlusCoref_pathLSTM #::
-          resultVerbSRLPlusPrepSRL_path_lstm #:: resultVerbSRLPlusCommaSRL_pathLSTM #:: resultSimpleMatching #:: Stream.empty).find { t =>
-          println("trying: " + t._2)
-          t._1._1.nonEmpty
-        }
       case default =>
         // note: there is inefficiency here; we preprocess the input once at the beginning of this function, and also inside the linear classifier
         val result = EntityRelationResult()
         val selected = Seq(predictMaxScoreWekaClassifier(question, options, snippet))
         Some((selected, result) -> "EnsembleMinimal")
     }
-
-    /*resultCause #:: resultWhatDoesItdo #:: resultVerbSRLPlusCoref_curatorSRL #:: resultVerbSRLPlusCoref_pathLSTM #::
-        resultSRLV1_pipeline #:: resultVerbSRLPlusCoref_pipelineSRL #:: resultVerbSRLPlusPrepSRL_pipeline_srl #::
-        srlV1ILP_pipeline_srl #:: resultVerbSRLPlusPrepSRL_path_lstm  #:: srlV1ILP_curator_srl #:: srlV1ILP_path_lstm #::*/
-    /*resultVerbSRLPlusCommaSRL_pipelneSRL #:: resultVerbSRLPlusCommaSRL_pathLSTM #::*/
-    /*resultVerbSRLPlusCommaSRL_curatorSRL #::*/
-    /*resultSRLV3_pipeline*/
-    /*#:: resultSimpleMatching*/
-
-    //    val resultOpt = Seq(resultWhatDoesItdo, resultCause, resultSRLV1, resultVerbSRLPlusPrepSRL, srlV1ILP,
-    //      resultVerbSRLPlusCoref, resultILP, resultSRLV2, resultVerbSRLPlusCommaSRL).find{ t =>
-    //      println("trying: " + t._2)
-    //      t._1._1.nonEmpty
-    //    }
-
-    //    val resultOpt = (
-    //      resultWhatDoesItdo #::
-    //        resultCause #::
-    //        resultVerbSRLPlusCoref_pipelineSRL #::
-    //        srlV1ILP_path_lstm #::
-    //        resultVerbSRLPlusCoref_pathLSTM #::
-    //        srlV1ILP_curator_srl #::
-    //        resultSRLV1_pipeline #::
-    //        resultVerbSRLPlusPrepSRL_path_lstm #::
-    //        resultSimpleMatching #::
-    //        resultVerbSRLPlusCoref_curatorSRL #::
-    //        srlV1ILP_curator_srl #::
-    //        srlV1ILP_pipeline_srl #::
-    //        resultVerbSRLPlusPrepSRL_pipeline_srl #:: Stream.empty).find{ t =>
-    //      println("trying: " + t._2)
-    //      t._1._1.nonEmpty
-    //    }
-
-    /*
-    List(
-      WhatDoesItDoRule-SRL_VERB_PATH_LSTM.tsv,
-      CauseRule-SRL_VERB_PATH_LSTM.tsv,
-      VerbSRLandCoref-SRL_VERB.tsv,
-      SRLV1ILP-SRL_VERB_PATH_LSTM.tsv,
-      VerbSRLandCoref-SRL_VERB_PATH_LSTM.tsv,
-      SRLV1ILP-SRL_VERB_CURATOR.tsv,
-      SRLV1Rule-SRL_VERB.tsv,
-      VerbSRLandPrepSRL-SRL_VERB_PATH_LSTM.tsv,
-      SimpleMatching-SRL_VERB_PATH_LSTM.tsv,
-      VerbSRLandCoref-SRL_VERB_CURATOR.tsv,
-      SRLV1ILP-SRL_VERB.tsv,
-      VerbSRLandPrepSRL-SRL_VERB.tsv,
-
-      SRLV3Rule-SRL_VERB.tsv,
-      VerbSRLandCommaSRL-SRL_VERB.tsv,
-      VerbSRLandCommaSRL-SRL_VERB_CURATOR.tsv,
-      VerbSRLandCommaSRL-SRL_VERB_PATH_LSTM.tsv,
-      VerbSRLandPrepSRL-SRL_VERB_CURATOR.tsv,
-      SRLV1Rule-SRL_VERB_PATH_LSTM.tsv,
-      SRLV3Rule-SRL_VERB_PATH_LSTM.tsv,
-      SRLV3Rule-SRL_VERB_CURATOR.tsv
-    )
-     */
-
-
-    //    val resultOpt = (
-    //        resultVerbSRLPlusCoref_pipelineSRL #:: srlV1ILP_pipeline_srl #::
-    //          resultSimpleMatching #:: resultVerbSRLPlusPrepSRL_pipeline_srl #:: resultVerbSRLPlusCommaSRL_pipelneSRL #:: Stream.empty).find{ t =>
-    //      println("trying: " + t._2)
-    //      t._1._1.nonEmpty
-    //    }
-    //val resultOpt = Some(everything_jointly)
-
-    //    val resultOpt = (resultVerbSRLPlusCoref_curatorSRL #:: srlV1ILP_pipeline_srl #:: resultVerbSRLPlusCoref_pipelineSRL #::
-    //      srlV1ILP_curator_srl #:: resultVerbSRLPlusCoref_pathLSTM #:: resultVerbSRLPlusPrepSRL_pipeline_srl #:: srlV1ILP_path_lstm #::
-    //      resultSRLV3_pipeline #:: resultVerbSRLPlusCommaSRL_pipelneSRL #:: resultVerbSRLPlusCommaSRL_curatorSRL #::
-    //      resultVerbSRLPlusCommaSRL_pipelneSRL #:: Stream.empty).find{ t =>
-    //      println("trying: " + t._2)
-    //      t._1._1.nonEmpty
-    //    }
 
     if (resultOpt.isDefined) {
       println(" ----> Selected method: " + resultOpt.get._2)
@@ -1026,19 +756,16 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
     val qTokens = if (qTA.hasView(ViewNames.SHALLOW_PARSE)) qTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
     val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
-    val sid= scala.collection.mutable.MutableList.empty[Int]
-    pTokens.foreach{pToken=>
-      sid +=pToken.getSentenceId
-    }
 
-    val sents=p.context.split("\\.")
+
+  /*  val sents=p.context.split("\\.")
     val biglist = scala.collection.mutable.Buffer.empty[scala.collection.mutable.Buffer[Constituent]]
     //val pTokens = scala.collection.mutable.MutableList.empty[Constituent]
     sents.foreach { sent =>
       val ant_sent = annotationUtils.annotateWithEverything(sent)
       val sentTokens = ant_sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
       biglist +=sentTokens
-    }
+    }*/
     //val pTokens = biglist.flatten.toList
    /* val sentRelations = scala.collection.mutable.MutableList.empty[Any]
     sents.foreach{ sent=>
@@ -1236,7 +963,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         }
       }
 
-    /*  if (p.contextTAOpt.get.hasView(ViewNames.DEPENDENCY_STANFORD)) {
+      if (p.contextTAOpt.get.hasView(ViewNames.DEPENDENCY_STANFORD)) {
         val depView = p.contextTAOpt.get.getView(ViewNames.DEPENDENCY_STANFORD)
         val depRelations = depView.getRelations.asScala
         interParagraphAlignments = depRelations.zipWithIndex.map { case (r, idx) =>
@@ -1290,7 +1017,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
       else {
         println("Paragraph does not contain parse-view . . . ")
-      } */
+      }
 
       // there is an upper-bound on the max number of active tokens in each sentence
       activeSentences.foreach { case (ans, x) =>
@@ -1423,8 +1150,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val statistics = Stats(numberOfBinaryVars, numberOfContinuousVars, numberOfIntegerVars, numberOfConstraints,
       ilpIterations = ilpSolver.getNLPIterations, modelCreationInSec = (modelSolveEnd - modelSolveStart) / 1000.0,
       solveTimeInSec = (modelSolveStart - modelCreationStart) / 1000.0, objectiveValue = ilpSolver.getPrimalbound)
-    ilpSolver.exportModel("Orig_ILP_Model",true)
-    ilpSolver.exportModel("Reduced_ILP_Model",false)
+    //ilpSolver.exportModel("Orig_ILP_Model",true)
+    //ilpSolver.exportModel("Reduced_ILP_Model",false)
     val iter = ilpSolver.getAllActiveVars
     ilpSolver.printResult(iter)
     if (verbose) {
@@ -1490,11 +1217,20 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       val sentences = p.context.split("\\.")
       val activeSentList = sentList.map(sentences(_)).mkString(",")
+      val sentindexes = (0 to sentences.length-1).toList
 
-      val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.Buffer[Constituent]]
-      sentences.foreach { sent =>
-        val ant_sent = annotationUtils.annotateWithEverything(sent)
-        val sentTokens = ant_sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
+
+      val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
+      val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
+      val sid= scala.collection.mutable.MutableList.empty[Int]
+      pTokens.foreach{pToken=>
+        sid +=pToken.getSentenceId
+      }
+      val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Int]]
+      sentindexes.foreach { sent =>
+        //val ant_sent = annotationUtils.annotateWithEverything(sent)
+        //val sentTokens = ant_sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
+        val sentTokens = sid.filter(_ == sent)
         biglist +=sentTokens
       }
 
@@ -1509,7 +1245,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
 
-          val ant_question = annotationUtils.annotateWithEverything(q.questionText)
+      val ant_question = annotationUtils.annotateWithEverything(q.questionText)
       val quesCons = ant_question.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
 
       val listofscores = scala.collection.mutable.MutableList.empty[Double]
@@ -1561,7 +1297,6 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           }
           listofscores2 += score
         }
-      val sentindexes = (0 to sentences.length-1).toList
       val finalSentScores = (sentScores, listofscores2).zipped.map(_ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
@@ -1645,7 +1380,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
       // inter-paragraph alignments
-    /*  interParagraphAlignments.foreach { case (c1, c2, x) =>
+      interParagraphAlignments.foreach { case (c1, c2, x) =>
         if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
           val pBeginIndex1 = c1.getStartCharOffset + questionString.length + paragraphBeginning.length
           val pEndIndex1 = pBeginIndex1 + c1.getSurfaceForm.length
@@ -1697,18 +1432,18 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
             }
           }
         }
-      }*/
+      }
 
       if (verbose) println("returning the answer  . . . ")
-      val solvedAnswerLog = sortedMap.toString
-      /*val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
-      //  "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
+     // val solvedAnswerLog = sortedMap.toString
+      val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
+        "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
         " activeSentences: " + activeSentList +
         "  aTokens: " + aTokens.toString +
-      " scoredSentences: " + sortedMap.toString*/
+      " scoredSentences: " + sortedMap.toString
 
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
