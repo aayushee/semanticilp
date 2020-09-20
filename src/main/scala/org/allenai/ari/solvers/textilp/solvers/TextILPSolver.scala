@@ -151,39 +151,9 @@ object TextILPSolver {
   lazy val offlineAligner = new AlignmentFunction("Entailment", 0.2,
     TextILPSolver.keywordTokenizer, useRedisCache = false, useContextInRedisCache = false)
 
-  lazy val sahandClient = new SahandClient(s"${Constants.sahandServer}:${Constants.sahandPort}/")
 
   val toBeVerbs = Set("am", "is", "are", "was", "were", "being", "been", "be", "were", "be")
 
-  import weka.core.SerializationHelper
-
-  lazy val wekaClassifier = Constants.textILPModel match {
-    case TextILPModel.EnsembleFull => SerializationHelper.read("output/logistic.model").asInstanceOf[Classifier]
-    case TextILPModel.EnsembleMinimal => SerializationHelper.read("output/logistic-nocurator2.model").asInstanceOf[Classifier]
-
-    // created for ablation study
-    case TextILPModel.EnsembleNoSimpleMatching => SerializationHelper.read("output/logistic-nosimplematching.model").asInstanceOf[Classifier]
-    case TextILPModel.EnsembleNoPrepSRL => SerializationHelper.read("output/logistic-noprepsrl.model").asInstanceOf[Classifier]
-    case TextILPModel.EnsembleNoVerbSRL => SerializationHelper.read("output/logistic-noverbsrl.model").asInstanceOf[Classifier]
-    case TextILPModel.EnsembleNoCommaSRL => SerializationHelper.read("output/logistic-nocommasrl.model").asInstanceOf[Classifier]
-    case TextILPModel.EnsembleNoCoref => SerializationHelper.read("output/logistic-nocoref.model").asInstanceOf[Classifier]
-  }
-
-  lazy val headerEmptyInstances = {
-    val loader = new ArffLoader()
-    Constants.textILPModel match {
-      case TextILPModel.EnsembleFull => loader.setFile(new File("output/headerFile.arff"))
-      case TextILPModel.EnsembleMinimal => loader.setFile(new File("output/headerFile_nocurator.arff"))
-
-      // created for ablation
-      case TextILPModel.EnsembleNoSimpleMatching => loader.setFile(new File("output/headerFile_nosimplematching.arff"))
-      case TextILPModel.EnsembleNoPrepSRL => loader.setFile(new File("output/headerFile_noprepsrl.arff"))
-      case TextILPModel.EnsembleNoVerbSRL => loader.setFile(new File("output/headerFile_noverbsrl.arff"))
-      case TextILPModel.EnsembleNoCommaSRL => loader.setFile(new File("output/headerFile_nocomma.arff"))
-      case TextILPModel.EnsembleNoCoref => loader.setFile(new File("output/headerFile-nocoref.arff"))
-    }
-    loader.getDataSet
-  }
 }
 
 case class TextIlpParams(
@@ -275,11 +245,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           t._1._1.nonEmpty
         }
 
-      case default =>
-        // note: there is inefficiency here; we preprocess the input once at the beginning of this function, and also inside the linear classifier
-        val result = EntityRelationResult()
-        val selected = Seq(predictMaxScoreWekaClassifier(question, options, snippet))
-        Some((selected, result) -> "EnsembleMinimal")
+
     }
 
     if (resultOpt.isDefined) {
@@ -508,10 +474,9 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val interSentenceTokenAlignments = for {
         pCons1 <- pTokens
         pCons2 <- pTokens
-        if (pCons1.getSentenceId != pCons2.getSentenceId) {
-           score = alignmentFunction.scoreCellCell(pCons1.getSurfaceForm, pCons2.getSurfaceForm) + minPConsToPConsAlignment
-           x = ilpSolver.createBinaryVar(name = "", score)
-        }
+        if (pCons1.getSentenceId != pCons2.getSentenceId)
+           x = ilpSolver.createBinaryVar(name = "", alignmentFunction.scoreCellCell(pCons1.getSurfaceForm, pCons2.getSurfaceForm) + minPConsToPConsAlignment)
+
       } yield (pCons1,pCons2,x)
 
       interSentenceAlignments ++= interSentenceTokenAlignments.toBuffer
@@ -1270,90 +1235,4 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     }
   }
 
-
-  def predictMaxScoreWekaClassifier(question: String, options: Seq[String], snippet: String): Int = {
-    val (confidenceValuesPerAnsOption, _) = predictAllCandidatesWithWekaClassifier(question, options, snippet)
-    confidenceValuesPerAnsOption.zipWithIndex.maxBy(_._1)._2
-  }
-
-  def predictAllCandidatesWithWekaClassifier(question: String, options: Seq[String], snippet: String): (Seq[Double], Instances) = {
-    // note there is inefficienss here. The instance gets pre-processed for each reasoning combination inside "distributionForInstance"
-    val fvs = extractFeatureVectorForQuestion(question, options, snippet)
-    val dataUnlabeled = new Instances(TextILPSolver.headerEmptyInstances)
-    dataUnlabeled.setClassIndex(dataUnlabeled.numAttributes() - 1)
-    val confidenceValuesPerAnsOption = fvs.zipWithIndex.map { case (featureVector, i) =>
-      val ins = new DenseInstance(featureVector.length)
-      ins.replaceMissingValues(featureVector.toArray)
-      dataUnlabeled.add(ins)
-      TextILPSolver.wekaClassifier.distributionForInstance(dataUnlabeled.instance(i))(0)
-    }
-    (confidenceValuesPerAnsOption, dataUnlabeled)
-  }
-
-  def extractFeatureVectorForQuestionWithCorrectLabel(question: String, options: Seq[String], snippet: String, correctIdx: Int): Seq[Seq[Double]] = {
-    val vectors = extractFeatureVectorForQuestion(question, options, snippet)
-    vectors.zipWithIndex.map { case (featureVector, idx) =>
-      featureVector :+ (if (idx == correctIdx) 1.0 else 0.0)
-    }
-  }
-
-  private def extractFeatureVectorForQuestion(question: String, options: Seq[String], snippet: String) = {
-    val types = Constants.textILPModel match {
-      case TextILPModel.EnsembleFull | TextILPModel.EnsembleMinimal =>
-       // Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, SRLV1Rule, VerbSRLandPrepSRL, SRLV1ILP, VerbSRLandCoref, SRLV2Rule, SRLV3Rule, VerbSRLandCommaSRL)
-        Seq(SimpleMatching)
-      case TextILPModel.EnsembleNoCoref =>
-        Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, SRLV1Rule, VerbSRLandPrepSRL, SRLV1ILP, SRLV2Rule, SRLV3Rule, VerbSRLandCommaSRL)
-      case TextILPModel.EnsembleNoPrepSRL =>
-        Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, SRLV1Rule, SRLV1ILP, VerbSRLandCoref, SRLV2Rule, SRLV3Rule, VerbSRLandCommaSRL)
-      case TextILPModel.EnsembleNoCommaSRL =>
-        Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, SRLV1Rule, VerbSRLandPrepSRL, SRLV1ILP, VerbSRLandCoref, SRLV2Rule, SRLV3Rule)
-      case TextILPModel.EnsembleNoSimpleMatching =>
-        Seq(WhatDoesItDoRule, CauseRule, SRLV1Rule, VerbSRLandPrepSRL, SRLV1ILP, VerbSRLandCoref, SRLV2Rule, SRLV3Rule, VerbSRLandCommaSRL)
-      case TextILPModel.EnsembleNoVerbSRL =>
-        Seq(SimpleMatching, WhatDoesItDoRule, CauseRule, VerbSRLandPrepSRL, VerbSRLandCoref, VerbSRLandCommaSRL)
-      case default =>
-        throw new Exception(s"Feature extraction is not defined for your selection ${Constants.textILPModel}")
-    }
-    val srlViewsAll = if (Constants.textILPModel == TextILPModel.EnsembleMinimal) {
-      //Seq(ViewNames.SRL_VERB, TextILPSolver.pathLSTMViewName)
-      Seq(TextILPSolver.pathLSTMViewName)
-    }
-    else {
-      Seq(ViewNames.SRL_VERB, TextILPSolver.curatorSRLViewName, TextILPSolver.pathLSTMViewName)
-    }
-    val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
-    //val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(SimpleMatching), useSummary = true, TextILPSolver.pathLSTMViewName)
-    //ilpSolver.free()
-    //result
-    val results = types.flatMap { t =>
-      val srlViewTypes = if (t == CauseRule || t == WhatDoesItDoRule || t == SimpleMatching) Seq(TextILPSolver.pathLSTMViewName) else srlViewsAll
-      srlViewTypes.flatMap { srlVu =>
-        //val results = solveTopAnswer(question, snippet, ilpSolver, aligner, Set(SimpleMatching), useSummary = true, TextILPSolver.pathLSTMViewName)
-        val results=solveAllAnswerOptions(question, options, snippet, t, srlVu)
-        results.flatMap { case (a, b) =>
-          a.map { c => (t, srlVu, c) -> b.statistics }
-        }
-      }
-    }.toMap
-    ilpSolver.free()
-    options.indices.map { idx =>
-      types.flatMap { t =>
-        val srlViewTypes = if (t == CauseRule || t == WhatDoesItDoRule || t == SimpleMatching) Seq(TextILPSolver.pathLSTMViewName) else srlViewsAll
-        srlViewTypes.flatMap { srlVu =>
-          if (results.contains((t, srlVu, idx))) {
-            val result = results((t, srlVu, idx))
-            val selected = if (result.selected) 1.0 else 0.0
-            val binVarNum = result.numberOfBinaryVars
-            val constNum = result.numberOfConstraints
-            val objValue = result.objectiveValue
-            Seq(selected, objValue, binVarNum, constNum, if (binVarNum == 0.0) 0.0 else objValue / binVarNum, if (constNum == 0.0) 0.0 else objValue / constNum)
-          }
-          else {
-            Seq(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-          }
-        }
-      }
-    }
-  }
 }

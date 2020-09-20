@@ -234,7 +234,7 @@ object ExperimentsApp {
         // evaluateTextSolverOnProcessBank(processReader.trainingInstances.filterNotTrueFalse.filterNotTemporals, textILPSolver)
         evaluateTextSolverOnProcessBank(processReader.testInstances.filterNotTrueFalse.filterNotTemporals, textILPSolver)
 
-         case 6 =>
+   /*      case 6 =>
         // process multirc questions
         val ps = Paragraph2.readJson5("/home/danielk/splitv2/dev_83-fixedIds.json") ++
           Paragraph2.readJson5("/home/danielk/splitv2/test_1_83-fixedIds.json") ++
@@ -283,7 +283,7 @@ object ExperimentsApp {
         }
 
         cacheOnDiskAi2(ps)
-
+ */
 
       case 7 =>
         val ps = Paragraph2.readJson5("/Users/daniel/ideaProjects/hard-qa/splitv2/dev_83-fixedIds.json")
