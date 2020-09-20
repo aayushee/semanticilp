@@ -83,7 +83,7 @@ class SolveQuestion @Inject() extends Controller {
           "selectedAnswersConfidences" -> out.unzip._2
         )
         json.toString()
-      case TextILPModel.EnsembleMinimal | TextILPModel.EnsembleFull =>
+    /*  case TextILPModel.EnsembleMinimal | TextILPModel.EnsembleFull =>
 
         import scala.collection.JavaConverters._
         println("Running with ensemble models . . . ")
@@ -105,7 +105,7 @@ class SolveQuestion @Inject() extends Controller {
           "features" -> features,
           "wekaInstances" -> instances.toString
         )
-        json.toString()
+        json.toString() */
       case default =>
         throw new Exception(s"solver type not found: ${Constants.textILPModel}")
     }
