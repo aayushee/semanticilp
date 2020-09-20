@@ -506,7 +506,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       def getVariablesConnectedToParagraphToken(c: Constituent): Seq[V] = {
         questionTokenParagraphTokenAlignments.filter { case (_, cTmp, _) => cTmp == c }.map(_._3) ++
-          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4)
+          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4) ++
+          interSentenceTokenAlignments.filter{ case (cTmp,_,_) => cTmp==c }.map(_._3)
       }
 
       def getVariablesConnectedToParagraphSentence(sentenceId: Int): Seq[V] = {
@@ -973,13 +974,20 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
       val interSentScores = scala.collection.mutable.MutableList.empty[Double]
 
-      interSentenceAlignments.foreach{ case(c1,c2,x) =>
-        if(ilpSolver.getSolVal(x) > 1.0- TextILPSolver.epsilon) {
-          interSentScores +=ilpSolver.getVarObjCoeff(x)
+      sentindexes.foreach { sentID=>
+        var sentScore = 0.0
+        interSentenceAlignments.foreach { case (c1, c2, x) =>
+         if (c1.getSentenceId == sentID) {
+          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
+            sentScore += ilpSolver.getVarObjCoeff(x)
+          }
+         }
+         }
+        interSentScores += sentScore
         }
-      }
 
-      val finalSentScores = (sentScores, listofscores2, listofscores3).zipped.map(_ + _ + _)
+      val finalSentScores = List(sentScores, listofscores2, listofscores3, interSentScores).transpose.map(_.sum)
+     // val finalSentScores = (sentScores, listofscores2, listofscores3).zipped.map(_ + _ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
 
@@ -1127,8 +1135,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         "  aTokens: " + aTokens.toString +
         " scoredSentences: " + sortedMap.toString +
         "interParaScores: " + listofscores3 +
-        "interSentScores:" + interSentScores +
-        "interSentenceAlignments: " + stringifyVariableSequence2(interSentenceAlignments)
+        "interSentScores:" + interSentScores
 
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
