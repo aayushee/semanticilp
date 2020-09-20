@@ -6,7 +6,6 @@ import java.net.URL
 import edu.cmu.meteor.scorer.{MeteorConfiguration, MeteorScorer}
 import edu.illinois.cs.cogcomp.core.datastructures.ViewNames
 import edu.illinois.cs.cogcomp.core.datastructures.textannotation.{Constituent, PredicateArgumentView, TextAnnotation}
-import github.sahand.{SahandClient, SimilarityNames}
 import org.allenai.ari.controller.questionparser.{FillInTheBlankGenerator, QuestionParse}
 import org.simmetrics.StringMetric
 import org.simmetrics.metrics.StringMetrics
@@ -16,10 +15,8 @@ import org.allenai.ari.solvers.bioProccess.ProcessBankReader._
 import org.allenai.ari.solvers.textilp.{EntityRelationResult, _}
 import org.allenai.ari.solvers.textilp.alignment.{AlignmentFunction, KeywordTokenizer}
 import org.allenai.ari.solvers.textilp.ilpsolver.{IlpVar, _}
+import org.allenai.ari.solvers.textilp.solvers.TextILPSolver.minPConsToPConsAlignment
 import org.allenai.ari.solvers.textilp.utils.{AnnotationUtils, Constants, SolverUtils}
-import weka.classifiers.Classifier
-import weka.core.converters.ArffLoader
-import weka.core.{DenseInstance, Instance, Instances, SparseInstance}
 
 import scala.collection.JavaConverters._
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
@@ -107,7 +104,8 @@ object TextILPSolver {
   val minActiveParagraphConstituentAggrAlignment = 0.1
   val minActiveQuestionConstituentAggrAlignment = 0.1
   val minAlignmentWhichTerm = 0.6d
-  val minPConsToPConsAlignment = 0.6
+  //val minPConsToPConsAlignment = 0.6
+  val minPConsToPConsAlignment = -0.4 //tuned for intersentence pcons alignment offset
   val minPConsTQChoiceAlignment = 0.2
   val whichTermAddBoost = 1.5d
   val whichTermMulBoost = 1d
@@ -294,11 +292,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
   def solveWithReasoningType(question: String, options: Seq[String], snippet: String, reasoningType: ReasoningType, srlViewName: String = TextILPSolver.pathLSTMViewName): (Seq[Int], EntityRelationResult) = {
     val (q: Question, p: Paragraph) = preprocessQuestionData(question, options, snippet)
     reasoningType match {
-      case SRLV1Rule => SRLSolverV1(q, p, srlViewName)
-      case SRLV2Rule => SRLSolverV2(q, p, srlViewName)
-      case SRLV3Rule => SRLSolverV3(q, p, aligner, srlViewName)
-      case WhatDoesItDoRule => WhatDoesItDoSolver(q, p)
-      case CauseRule => CauseResultRules(q, p)
+
       case x =>
         val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
         val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(x), useSummary = true, srlViewName)
@@ -318,11 +312,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val srlViewTypes = if (t == CauseRule || t == WhatDoesItDoRule || t == SimpleMatching) Seq(TextILPSolver.pathLSTMViewName) else srlViewsAll
       srlViewTypes.map { srlViewName =>
         t match {
-          case SRLV1Rule => SRLSolverV1(q, p, srlViewName)
-          case SRLV2Rule => SRLSolverV2(q, p, srlViewName)
-          case SRLV3Rule => SRLSolverV3(q, p, aligner, srlViewName)
-          case WhatDoesItDoRule => WhatDoesItDoSolver(q, p)
-          case CauseRule => CauseResultRules(q, p)
+
           case x =>
             val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
             val result = solveTopAnswer(q, p, ilpSolver, aligner, Set(x), useSummary = true, srlViewName)
@@ -409,329 +399,6 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     (q, p)
   }
 
-  // what (does|do|can) .* do
-  def WhatDoesItDoSolver(q: Question, p: Paragraph): (Seq[Int], EntityRelationResult) = {
-    val qTokens = if (q.qTAOpt.get.hasView(ViewNames.SHALLOW_PARSE)) q.qTAOpt.get.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
-    val pTokens = if (p.contextTAOpt.get.hasView(ViewNames.SHALLOW_PARSE)) p.contextTAOpt.get.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
-
-    val selected = if (q.questionText.isWhatDoesItDo && q.answers.length == 2) {
-      def getClosestIndex(qCons: Seq[Constituent], pCons: Seq[Constituent]): Int = {
-        pCons.map { c =>
-          TextILPSolver.getAvgScore(qCons, Seq(c))
-        }.zipWithIndex.maxBy(_._1)._2
-      }
-
-      val qIdx = getClosestIndex(qTokens, pTokens)
-      val ans1Cons = q.answers(0).aTAOpt.get.getView(ViewNames.TOKENS).asScala.toList
-      val ans2Cons = q.answers(1).aTAOpt.get.getView(ViewNames.TOKENS).asScala.toList
-      val a1Idx = getClosestIndex(ans1Cons, pTokens)
-      val a2Idx = getClosestIndex(ans2Cons, pTokens)
-
-      // one before, one after: after is the anser
-      if (a1Idx < qIdx && a2Idx > qIdx) {
-        // at least one of the answers happens before the question
-        // the second one is the answer
-        Seq(1)
-      }
-      else if (a1Idx > qIdx && a2Idx < qIdx) {
-        // at least one of the answers happens before the question
-        // the first one is the answer
-        Seq(0)
-      } else if (a1Idx > qIdx && a2Idx > qIdx) {
-        // both after: closer is the answer
-        if (a2Idx < a1Idx) {
-          // at least one of the answers happens before the question
-          // the second one is the answer
-          Seq(1)
-        }
-        else if (a2Idx > a1Idx) {
-          // the first one is the answer
-          Seq(0)
-        }
-        else {
-          Seq.empty
-        }
-      }
-      else {
-        Seq.empty
-      }
-    }
-    else {
-      Seq.empty
-    }
-    selected.distinct -> EntityRelationResult(log = "solved by WhatDoesItDoSolver", statistics = Stats(selected = true))
-  }
-
-  def SimilarityMetricSolver(q: Question, p: Paragraph): (Seq[Int], EntityRelationResult) = {
-    def compareSimilairityInWndow(p: Paragraph, questionString: String, windowSize: Int, metric: StringMetric): Double = {
-      val paragraphTokens = p.contextTAOpt.get.getTokens
-      val paragraphSize = paragraphTokens.length
-      if (paragraphSize > windowSize) {
-        (0 until paragraphSize - windowSize).map { startIdx =>
-          val endIdx = startIdx + windowSize
-          val paragraphWindow = paragraphTokens.slice(startIdx, endIdx).mkString(" ")
-          metric.compare(paragraphWindow, questionString)
-        }.max
-      } else {
-        0.0
-      }
-    }
-
-    // exact match: if there is a good match between the question
-    val qparse = QuestionParse.constructFromString(q.questionText)
-    val metric = StringMetrics.qGramsDistance()
-    val fitbQuestionStrOpt = TextILPSolver.fitbGenerator.generateFITB(qparse).map(_.text)
-    val selected = fitbQuestionStrOpt match {
-      case Some(x) =>
-        val indexScorePairs = q.answers.indices.map { idx =>
-          val str = x.replace("BLANK_", q.answers(idx).answerText).dropRight(1).toLowerCase
-          idx -> compareSimilairityInWndow(p, str, q.qTAOpt.get.getTokens.length +
-            q.answers(idx).aTAOpt.get.getTokens.length, metric)
-        }
-        val sortedScores = indexScorePairs.sortBy(-_._2).take(2)
-        val maxS = sortedScores(0)._2
-        val secondMaxS = sortedScores(1)._2
-        val maxIdx = sortedScores(0)._1
-        if (maxS > params.exactMatchMinScoreValue && maxS - secondMaxS >= params.exactMatchMinScoreDiff) {
-          // maxIdx should be the answer
-          Seq(maxIdx)
-        }
-        else {
-          Seq.empty
-        }
-      case None => Seq.empty
-    }
-    selected -> EntityRelationResult()
-  }
-
-  def CauseResultRules(q: Question, p: Paragraph): (Seq[Int], EntityRelationResult) = {
-    // for result questions ...
-    val answered = if (q.questionText.isForCResultQuestion && q.answers.length == 2) {
-      def getClosestIndex(qCons: Seq[Constituent], pCons: Seq[Constituent]): Int = {
-        pCons.map { c =>
-          TextILPSolver.getAvgScore(qCons, Seq(c))
-        }.zipWithIndex.maxBy(_._1)._2
-      }
-
-      val pCons = p.contextTAOpt.get.getView(ViewNames.SHALLOW_PARSE).asScala.toList
-      val qCons = q.qTAOpt.get.getView(ViewNames.SHALLOW_PARSE).asScala.toList
-      val qIdx = getClosestIndex(qCons, pCons)
-      val ans1Cons = q.answers(0).aTAOpt.get.getView(ViewNames.TOKENS).asScala.toList
-      val ans2Cons = q.answers(1).aTAOpt.get.getView(ViewNames.TOKENS).asScala.toList
-      val a1Idx = getClosestIndex(ans1Cons, pCons)
-      val a2Idx = getClosestIndex(ans2Cons, pCons)
-
-      // at least one of the answers happens before the question
-      if (a1Idx < qIdx && a2Idx > qIdx + 6) {
-        // a2 should be the answer
-        Seq(1)
-      }
-      else if (a2Idx < qIdx && a1Idx > qIdx + 6) {
-        // a1 should be the answer
-        Seq(0)
-      }
-      else {
-        Seq.empty
-      }
-    }
-    else {
-      Seq.empty
-    }
-    answered -> EntityRelationResult(log = "solved by CauseResultRules", statistics = Stats(selected = true))
-  }
-
-  /**
-    * select a frame from the paragraph such that:
-    * Its A1/A0 argument has enough similarity with one of the terms in the questions
-    * Its A1/A0 argument has enough similarity with the target answer option.
-    */
-  def SRLSolverV3(q: Question, p: Paragraph, alignmentFunction: AlignmentFunction, srlViewName: String): (Seq[Int], EntityRelationResult) = {
-    val uniqueSelected = if (q.qTAOpt.get.hasView(srlViewName) && p.contextTAOpt.get.hasView(srlViewName)) {
-      val qCons = q.qTAOpt.get.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala.map(_.getSurfaceForm)
-      val pSRLView = p.contextTAOpt.get.getView(srlViewName)
-      val pSRLCons = pSRLView.getConstituents.asScala
-      val consGroupepd = pSRLCons.filter(c => c.getLabel != "Predicate" /*&& (c.getLabel == "A0" || c.getLabel == "A1")*/).flatMap { c =>
-        c.getIncomingRelations.asScala.map(r => (c.getSurfaceForm, getPredicateFullLabel(r.getSource)))
-      }.groupBy(_._2)
-
-      val bothAnswersCovered = q.answers.zipWithIndex.forall { case (ans, idx) =>
-        pSRLCons.exists { c => alignmentFunction.scoreCellQChoice(ans.answerText, c.getSurfaceForm) > 0.25 }
-      }
-
-      val framesThatAlignWithQuestion = consGroupepd.filter { case (pred, list) =>
-        val cons = list.unzip._1
-        qCons.zip(cons).foreach { case (qC, pC) =>
-        }
-        qCons.zip(cons).exists { case (qC, pC) => alignmentFunction.scoreCellQCons(qC, pC) > 0.15 }
-      }
-
-      val scorePerAns = q.answers.zipWithIndex.map { case (ans, idx) =>
-        (framesThatAlignWithQuestion.flatMap { case (pred, list) =>
-          val cons = list.unzip._1
-          cons.map(c => alignmentFunction.scoreCellQChoice(ans.answerText, c))
-        } ++ Seq(-1.0)).max
-      }
-      val selected = Seq(scorePerAns.zipWithIndex.maxBy(_._1)._2)
-      if (scorePerAns.zipWithIndex.maxBy(_._1)._1 == -1 || bothAnswersCovered) Seq.empty else selected
-    }
-    else {
-      Seq.empty
-    }
-
-    uniqueSelected -> EntityRelationResult(log = s"Solved by SRLV3 / View: $srlViewName  / selected: $uniqueSelected", statistics = Stats(selected = true))
-  }
-
-  def SRLSolverV2(q: Question, p: Paragraph, srlViewName: String): (Seq[Int], EntityRelationResult) = {
-    assert(q.qTAOpt.get.hasView(annotationUtils.fillInBlankAnnotator.getViewName),
-      "q.questionText: " + q.questionText + " / the current view: " + q.qTAOpt.get.getAvailableViews.asScala)
-    val fillInBlank = q.qTAOpt.get.getView(annotationUtils.fillInBlankAnnotator.getViewName).getConstituents.get(0).getLabel
-    val fillInBlankTA = if (fillInBlank == "") {
-      q.qTAOpt.get
-    } else {
-      annotationUtils.pipelineServerClient.annotate(fillInBlank)
-    }
-    val results = q.answers.map { ans =>
-      require(ans.aTAOpt.get.hasView(ViewNames.SHALLOW_PARSE), s"Answer TA does not contain shallow parse view. fillInBlank: $fillInBlank - Views are: ${ans.aTAOpt.get.getAvailableViews}")
-      require(fillInBlankTA.hasView(ViewNames.SHALLOW_PARSE), s"fillInBlankTA does not contain shallow parse view. Views are: ${fillInBlankTA.getAvailableViews}")
-      val questionAndAnsOption = annotationUtils.blankQuestionAnswerOptionNormalizer(ans.aTAOpt.get, fillInBlankTA, annotationUtils)
-      val questionAndAnsOptionTA = annotationUtils.pipelineServerClient.annotate(questionAndAnsOption)
-      if (questionAndAnsOptionTA.hasView(srlViewName) && p.contextTAOpt.get.hasView(srlViewName)) {
-        if (matchPredicatesAndArguments(questionAndAnsOptionTA, p.contextTAOpt.get, ans, keytermsWithWHOverlap = false,
-          doOverlapWithQuestion = true, fillInBlank, srlViewName)) 1.0 else 0.0
-      }
-      else {
-        0.0
-      }
-    }
-    if (verbose) println("results: " + results)
-    val selectedAnswers = if (results.sum == 1) {
-      // i.e. only one of the answer options has overlap
-      results.zipWithIndex.flatMap { case (v, idx) =>
-        if (v == 1) {
-          Seq(idx)
-        }
-        else {
-          Seq.empty
-        }
-      }
-    }
-    else {
-      Seq.empty
-    }
-
-    selectedAnswers.distinct -> EntityRelationResult(log = s"Solved by SRLV2 / View: $srlViewName  / selected: $selectedAnswers", statistics = Stats(selected = true))
-  }
-
-  def SRLSolverV1(q: Question, p: Paragraph, srlViewName: String): (Seq[Int], EntityRelationResult) = {
-    val selectedAnswers = if (q.qTAOpt.get.hasView(srlViewName) && p.contextTAOpt.get.hasView(srlViewName)) {
-      val results = q.answers.map { ans =>
-        if (matchPredicatesAndArguments(q.qTAOpt.get, p.contextTAOpt.get, ans, keytermsWithWHOverlap = true,
-          doOverlapWithQuestion = false, q.questionText, srlViewName)) 1.0 else 0.0
-      }
-      if (verbose) println("results: " + results)
-      if (results.sum == 1) {
-        // i.e. only one of the answer options has overlap
-        results.zipWithIndex.flatMap { case (v, idx) =>
-          if (v == 1) {
-            Seq(idx)
-          }
-          else {
-            Seq.empty
-          }
-        }
-      }
-      else {
-        Seq.empty
-      }
-    }
-    else {
-      Seq.empty
-    }
-
-    selectedAnswers.distinct -> EntityRelationResult(log = s"Solved by SRLV1 / View: $srlViewName  / selected: $selectedAnswers", statistics = Stats(selected = true))
-  }
-
-  // input supposed to be a predicate (i.e. it gets connected to other arguments via outgoing edges)
-  def getConstituentsInFrame(c: Constituent): Seq[Constituent] = {
-    c.getOutgoingRelations.asScala.map(_.getTarget)
-  }
-
-  def getTokensInFrame(c: Constituent): Seq[String] = {
-    getConstituentsInFrame(c).flatMap(_.getSurfaceForm.split(" "))
-  }
-
-  def matchPredicatesAndArguments(qTA: TextAnnotation,
-                                  pTA: TextAnnotation, ans: Answer,
-                                  keytermsWithWHOverlap: Boolean = true,
-                                  doOverlapWithQuestion: Boolean = false,
-                                  originalQuestion: String, srlViewName: String): Boolean = {
-    val verbose = false
-    val qSRLView = qTA.getView(srlViewName)
-    val pSRLView = pTA.getView(srlViewName)
-    val qSRLCons = qSRLView.getConstituents.asScala
-    val pSRLCons = pSRLView.getConstituents.asScala
-
-    val keytermCons = if (keytermsWithWHOverlap) {
-      // does question-srl contain any question term?
-      qSRLCons.filter(c => SolverUtils.questionTerms.contains(c.getSurfaceForm.toLowerCase) && c.getIncomingRelations.size() > 0)
-    }
-    else {
-      // align with answer words
-      if (qTA.text.contains(ans.answerText.trim)) {
-        val idxBegin = qTA.text.indexOf(ans.answerText)
-        val idxEnd = idxBegin + ans.answerText.length - 1
-        val out = qSRLCons.filter { c =>
-          (c.getEndCharOffset <= idxEnd && c.getEndCharOffset >= idxBegin) ||
-            (c.getStartCharOffset <= idxEnd && c.getStartCharOffset >= idxBegin) ||
-            (c.getEndCharOffset >= idxEnd && c.getStartCharOffset <= idxBegin)
-        }.filter(c => c.getLabel != "Predicate" && (c.getLabel == "A1" || c.getLabel == "A1") && c.getIncomingRelations.size() > 0)
-        if (out.isEmpty) {
-          // println("qSRLCons: " + qSRLCons)
-        }
-        out
-      }
-      else {
-        Seq.empty
-      }
-    }
-
-    val questionWithoutKeyTermsTokens = originalQuestion.split(" ").toSet.diff(SolverUtils.stopwords)
-
-    keytermCons.exists { cons =>
-      val qArgLabel = cons.getLabel
-      val qSource = cons.getIncomingRelations.get(0).getSource
-
-      val qSourceLabel = getPredicateFullLabel(qSource)
-      val pParagraph = pSRLCons.filter(c => getPredicateFullLabel(c) == qSourceLabel)
-      val pArgCons = pParagraph.flatMap { pred =>
-        val overlapWithQuestion = questionWithoutKeyTermsTokens.intersect(getTokensInFrame(pred).toSet)
-        val answerOptionContainsThePredicate = ans.answerText.contains(qSource.getSurfaceForm.trim)
-        val containsOneOfQuestionTerms = if (answerOptionContainsThePredicate) overlapWithQuestion.nonEmpty else true
-        if (containsOneOfQuestionTerms) {
-          pred.getOutgoingRelations.asScala.map(_.getTarget).filter(_.getLabel == qArgLabel)
-        }
-        else {
-          Seq.empty
-        }
-      }
-
-      // check if any of the any of t he selected constituents overlap with one of the answers
-      def getClosestIndex(qCons: Seq[Constituent], pCons: Seq[Constituent]): Int = {
-        pCons.map { c =>
-          TextILPSolver.getAvgScore(qCons, Seq(c))
-        }.zipWithIndex.maxBy(_._1)._2
-      }
-
-      assert(pTA.hasView(ViewNames.SHALLOW_PARSE), "current views: " + pTA.getAvailableViews.asScala)
-      val pCons = pTA.getView(ViewNames.SHALLOW_PARSE).asScala.toList
-      val ansCons = ans.aTAOpt.get.getView(ViewNames.TOKENS).asScala.toList
-      val ansParagraphIdx = getClosestIndex(ansCons, pCons)
-      val ansSpan = pCons(ansParagraphIdx).getSpan
-      if (pArgCons.exists { pArg => pArg.getSpan.getFirst <= ansSpan.getFirst && pArg.getSpan.getSecond >= ansSpan.getSecond }) true else false
-    }
-  }
-
-  def getPredicateFullLabel(pred: Constituent): String = pred.getLabel + pred.getAttribute("SenseNumber") + pred.getAttribute("predicate")
 
   def createILPModel[V <: IlpVar](
                                    q: Question,
@@ -741,7 +408,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
                                    reasoningTypes: Set[ReasoningType],
                                    useSummary: Boolean,
                                    srlViewName: String
-                                 ): (mutable.Buffer[(Constituent, Constituent, V)], mutable.Buffer[(Constituent, Int, Int, V)], mutable.Buffer[(Constituent, Constituent, V)], Seq[(Int, V)], Boolean, Seq[Seq[String]],mutable.Buffer[(Int,V)]) = {
+                                 ): (mutable.Buffer[(Constituent, Constituent, V)], mutable.Buffer[(Constituent, Int, Int, V)], mutable.Buffer[(Constituent, Constituent, V)], Seq[(Int, V)], Boolean, Seq[Seq[String]],mutable.Buffer[(Int,V)], mutable.Buffer[(Constituent, Constituent, V)]) = {
     if (verbose) println("starting to create the model  . . . ")
     val isTrueFalseQuestion = q.isTrueFalse
 
@@ -785,6 +452,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     var questionParagraphAlignments: mutable.Buffer[(Constituent, Constituent, V)] = mutable.Buffer.empty
     var paragraphAnswerAlignments: mutable.Buffer[(Constituent, Int, Int, V)] = mutable.Buffer.empty
     val activeSentences: mutable.Buffer[(Int,V)] = mutable.Buffer.empty
+    var interSentenceAlignments : mutable.Buffer[(Constituent,Constituent,V)] = mutable.Buffer.empty
     // whether to create the model with the tokenized version of the answer options
     val tokenizeAnswers = true
     //if(q.isTemporal) true else false
@@ -836,6 +504,17 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       } yield (qCons, pCons, x)
 
       questionParagraphAlignments ++= questionTokenParagraphTokenAlignments.toBuffer
+
+      val interSentenceTokenAlignments = for {
+        pCons1 <- pTokens
+        pCons2 <- pTokens
+        if (pCons1.getSentenceId != pCons2.getSentenceId) {
+           score = alignmentFunction.scoreCellCell(pCons1.getSurfaceForm, pCons2.getSurfaceForm) + minPConsToPConsAlignment
+           x = ilpSolver.createBinaryVar(name = "", score)
+        }
+      } yield (pCons1,pCons2,x)
+
+      interSentenceAlignments ++= interSentenceTokenAlignments.toBuffer
 
       // create paragraphToken-answerOption alignment edges
       val paragraphTokenAnswerAlignments = if (!isTrueFalseQuestion) {
@@ -1116,7 +795,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     }
 
     
-    (questionParagraphAlignments, paragraphAnswerAlignments, interParagraphAlignments, activeAnswerOptions, isTrueFalseQuestion, aTokens, activeSentences)
+    (questionParagraphAlignments, paragraphAnswerAlignments, interParagraphAlignments, activeAnswerOptions, isTrueFalseQuestion, aTokens, activeSentences, interSentenceAlignments)
   }
 
   def solveTopAnswer[V <: IlpVar](
@@ -1131,7 +810,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
     val modelCreationStart = System.currentTimeMillis()
 
-    val (questionParagraphAlignments, paragraphAnswerAlignments, interParagraphAlignments, activeAnswerOptions, isTrueFalseQuestion, aTokens, activeSentences) = createILPModel[V](q, p, ilpSolver, alignmentFunction, reasoningTypes, useSummary, srlViewName)
+    val (questionParagraphAlignments, paragraphAnswerAlignments, interParagraphAlignments, activeAnswerOptions, isTrueFalseQuestion, aTokens, activeSentences, interSentenceAlignments) = createILPModel[V](q, p, ilpSolver, alignmentFunction, reasoningTypes, useSummary, srlViewName)
 
     if (verbose) println("created the ilp model. Now solving it  . . . ")
 
@@ -1308,6 +987,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           }
       }
 
+
       val anotherlist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Int]]
 
       sentindexes.foreach{sent=>
@@ -1326,7 +1006,13 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         }
         listofscores3 += score
       }
+      val interSentScores = scala.collection.mutable.MutableList.empty[Double]
 
+      interSentenceAlignments.foreach{ case(c1,c2,x) =>
+        if(ilpSolver.getSolVal(x) > 1.0- TextILPSolver.epsilon) {
+          interSentScores +=ilpSolver.getVarObjCoeff(x)
+        }
+      }
 
       val finalSentScores = (sentScores, listofscores2, listofscores3).zipped.map(_ + _ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
@@ -1466,16 +1152,18 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
       if (verbose) println("returning the answer  . . . ")
-      val solvedAnswerLog = sortedMap.toString
-      /*val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
+      //val solvedAnswerLog = sortedMap.toString
+      val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
         "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +
         "  paragraphAnswerAlignments: " + stringifyVariableSequence4(paragraphAnswerAlignments) +
         " activeSentenceID: " + stringifyVariableSequence(activeSentences) +
         " activeSentences: " + activeSentList +
         "  aTokens: " + aTokens.toString +
-      " scoredSentences: " + sortedMap.toString +
-      "interParaScores: " + listofscores3*/
+        " scoredSentences: " + sortedMap.toString +
+        "interParaScores: " + listofscores3 +
+        "interSentScores:" + interSentScores +
+        "interSentenceAlignments: " + stringifyVariableSequence2(interSentenceAlignments)
 
 
       val erView = EntityRelationResult(questionString + paragraphString + choiceString, entities, relations,
@@ -1507,11 +1195,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     val annotationEnd = System.currentTimeMillis()
 
     reasoningType match {
-      case SRLV1Rule => Seq(SRLSolverV1(q, p, srlVu))
-      case SRLV2Rule => Seq(SRLSolverV2(q, p, srlVu))
-      case SRLV3Rule => Seq(SRLSolverV3(q, p, aligner, srlVu))
-      case WhatDoesItDoRule => Seq(WhatDoesItDoSolver(q, p))
-      case CauseRule => Seq(CauseResultRules(q, p))
+
       case x =>
         val ilpSolver = new ScipSolver("textILP", ScipParams.Default)
 
@@ -1519,7 +1203,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
         val (questionParagraphAlignments, paragraphAnswerAlignments,
         interParagraphAlignments, activeAnswerOptions,
-        isTrueFalseQuestion, aTokens, activeSentences) = createILPModel(q, p, ilpSolver, aligner, Set(reasoningType), useSummary = true, srlVu)
+        isTrueFalseQuestion, aTokens, activeSentences,interSentenceAlignments) = createILPModel(q, p, ilpSolver, aligner, Set(reasoningType), useSummary = true, srlVu)
         val modelCreationEnd = System.currentTimeMillis()
 
         if (verbose) println("created the ilp model. Now solving it  . . . ")
@@ -1586,17 +1270,6 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     }
   }
 
-  def getSolverPredictionsAsWekaInstance(question: String, options: Seq[String], snippet: String): Instances = {
-    val fvs = extractFeatureVectorForQuestion(question, options, snippet)
-    // convert out feature vector to Weka feature vector
-    val dataUnlabeled = new Instances(TextILPSolver.headerEmptyInstances)
-    val confidenceValuesPerAnsOption = fvs.foreach { featureVector =>
-      val ins = new SparseInstance(featureVector.length)
-      featureVector.zipWithIndex.foreach { case (value, i) => ins.setValue(i, value) }
-      dataUnlabeled.add(ins)
-    }
-    dataUnlabeled
-  }
 
   def predictMaxScoreWekaClassifier(question: String, options: Seq[String], snippet: String): Int = {
     val (confidenceValuesPerAnsOption, _) = predictAllCandidatesWithWekaClassifier(question, options, snippet)
