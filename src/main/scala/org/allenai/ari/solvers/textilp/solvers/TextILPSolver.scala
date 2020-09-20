@@ -798,7 +798,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     //ilpSolver.exportModel("Orig_ILP_Model",true)
     //ilpSolver.exportModel("Reduced_ILP_Model",false)
     val iter = ilpSolver.getAllActiveVars
-    ilpSolver.printResult(iter)
+    //ilpSolver.printResult(iter)
     if (verbose) {
       println("Statistics: " + statistics)
       println("ilpSolver.getPrimalbound: " + ilpSolver.getPrimalbound)
@@ -983,7 +983,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           }
          }
          }
-        interSentScores += sentScore
+        interSentScores += (sentScore/2)
         }
 
       val finalSentScores = List(sentScores, listofscores2, listofscores3, interSentScores).transpose.map(_.sum)
