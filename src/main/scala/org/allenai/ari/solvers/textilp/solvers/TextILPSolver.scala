@@ -465,7 +465,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         // TODO: make it QuestionCell score
         //      score = alignmentFunction.scoreCellCell(qCons.getSurfaceForm, pCons.getSurfaceForm) + params.questionCellOffset
         score = alignmentFunction.scoreCellQCons(pCons.getSurfaceForm, qCons.getSurfaceForm) + params.questionCellOffset
-       // if score > params.minParagraphToQuestionAlignmentScore
+        if score > params.minParagraphToQuestionAlignmentScore
         x = ilpSolver.createBinaryVar("", score)
       } yield (qCons, pCons, x)
 
@@ -474,8 +474,10 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val interSentenceTokenAlignments = for {
         pCons1 <- pTokens
         pCons2 <- pTokens
+        score = alignmentFunction.scoreCellCell(pCons1.getSurfaceForm, pCons2.getSurfaceForm) + minPConsToPConsAlignment
+        if (score > 0.0)
         if (pCons1.getSentenceId != pCons2.getSentenceId)
-           x = ilpSolver.createBinaryVar(name = "", alignmentFunction.scoreCellCell(pCons1.getSurfaceForm, pCons2.getSurfaceForm) + minPConsToPConsAlignment)
+           x = ilpSolver.createBinaryVar(name = "", score)
 
       } yield (pCons1,pCons2,x)
 
@@ -864,114 +866,48 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val activeSentList = sentList.map(sentences(_)).mkString(",")
       val sentindexes = (0 to sentences.length-1).toList
 
+      val qpascores = scala.collection.mutable.MutableList.empty[Double]
 
-      val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
-      val pTokens = if (pTA.hasView(ViewNames.SHALLOW_PARSE)) pTA.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala else Seq.empty
-      val sid= scala.collection.mutable.MutableList.empty[Int]
-      pTokens.foreach{pToken=>
-        sid +=pToken.getSentenceId
-      }
-      val biglist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Int]]
-      sentindexes.foreach { sent =>
-        //val ant_sent = annotationUtils.annotateWithEverything(sent)
-        //val sentTokens = ant_sent.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
-        val sentTokens = sid.filter(_ == sent)
-        biglist +=sentTokens
-      }
-
-      val Entscores = scala.collection.mutable.MutableList.empty[Double]
-
+      sentindexes.foreach{ sentid=>
+        var Entscore=0.0
       questionParagraphAlignments.foreach {
         case (c1, c2, x) =>
+          if (c2.getSentenceId==sentid)
           if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
-            Entscores += ilpSolver.getVarObjCoeff(x)
-          else
-            Entscores += 0.0
+            Entscore += ilpSolver.getVarObjCoeff(x)
+      }
+        qpascores +=Entscore
       }
 
 
-      val ant_question = annotationUtils.annotateWithEverything(q.questionText)
-      val quesCons = ant_question.getView(ViewNames.SHALLOW_PARSE).getConstituents.asScala
+      val paascores = scala.collection.mutable.MutableList.empty[Double]
 
-      val listofscores = scala.collection.mutable.MutableList.empty[Double]
-      var i = 0
-      quesCons.foreach { qCons =>
-        biglist.foreach { sentCons =>
-          var score = 0.0
-          sentCons.foreach { cons =>
-            score = score + Entscores(i)
-            i += 1
-          }
-          listofscores += score
+      sentindexes.foreach { sentid =>
+        var Entscore2=0.0
+        paragraphAnswerAlignments.foreach {
+          case (c1, a1, a2, x) =>
+            if (c1.getSentenceId == sentid)
+            if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
+              Entscore2 += ilpSolver.getVarObjCoeff(x)
         }
+        paascores +=Entscore2
       }
 
-      val sentScores = scala.collection.mutable.MutableList.empty[Double]
-      //var sum_elem = 0
-      var j = 0
-      val num=sentences.length
-      for (i <- 0 to num-1) {
-         var sum_elem = 0.0
-         j = i
-      while (j < listofscores.length ) {
-        sum_elem = sum_elem + listofscores(j)
-        j = j+ num
-      }
-        sentScores +=sum_elem
-      }
 
-      val Entscores2 = scala.collection.mutable.MutableList.empty[Double]
-
-      paragraphAnswerAlignments.foreach{
-        case(c1,a1,a2,x) =>
-          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
-            Entscores2 += ilpSolver.getVarObjCoeff(x)
-            else
-            Entscores2 += 0.0
-      }
-      val allAnsTokens=aTokens.flatten
-      val listofscores2 = scala.collection.mutable.MutableList.empty[Double]
-      var k = 0
-        biglist.foreach { sentCons =>
-          var score = 0.0
-          sentCons.foreach { cons =>
-            allAnsTokens.foreach{ atok=>
-            score = score + Entscores2(k)
-            k += 1
-          }
-          }
-          listofscores2 += score
-        }
-      val interParaRelations= scala.collection.mutable.MutableList.empty[Int]
       val interParaScores= scala.collection.mutable.MutableList.empty[Double]
 
-      interParagraphAlignments.foreach{
-        case(c1,c2,x)=>
-          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
-            interParaRelations +=c1.getSentenceId
-            interParaScores +=ilpSolver.getVarObjCoeff(x)
-          }
+      sentindexes.foreach{ sentid=>
+        var ipscore=0.0
+      interParagraphAlignments.foreach {
+        case (c1, c2, x) =>
+          if (c1.getSentenceId == sentid)
+            if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
+              ipscore += ilpSolver.getVarObjCoeff(x)
+      }
+          interParaScores+=ipscore
       }
 
 
-      val anotherlist = scala.collection.mutable.MutableList.empty[scala.collection.mutable.MutableList[Int]]
-
-      sentindexes.foreach{sent=>
-        val sentRelations = interParaRelations.filter(_ == sent)
-        anotherlist += sentRelations
-      }
-      val listofscores3 = scala.collection.mutable.MutableList.empty[Double]
-
-      var l = 0
-      anotherlist.foreach { sentreln =>
-        var score = 0.0
-        sentreln.foreach { cons =>
-            score = score + interParaScores(l)
-            l += 1
-
-        }
-        listofscores3 += score
-      }
       val interSentScores = scala.collection.mutable.MutableList.empty[Double]
 
       sentindexes.foreach { sentID=>
@@ -986,7 +922,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         interSentScores += (sentScore/2)
         }
 
-      val finalSentScores = List(sentScores, listofscores2, listofscores3, interSentScores).transpose.map(_.sum)
+      val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
      // val finalSentScores = (sentScores, listofscores2, listofscores3).zipped.map(_ + _ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
