@@ -906,7 +906,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         }*/
 
       //val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
-      val finalSentScores = (qpascores, paascores, interParaScores).zipped.map(_ + _ + _)
+      val finalSentScores = (qpascores, paascores).zipped.map(_ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
 
