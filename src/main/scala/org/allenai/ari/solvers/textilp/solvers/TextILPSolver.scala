@@ -847,8 +847,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
       val sentences = pTA.getNumberOfSentences
       //val sentences = p.context.split(" . ")
-      val activeSentList = sentList.map(sentences(_)).mkString(",")
-      val sentindexes = (0 to sentences.length-1).toList
+      //val activeSentList = sentList.map(sentences(_)).mkString(",")
+      val sentindexes = (0 to sentences-1).toList
 
       val qpascores = scala.collection.mutable.MutableList.empty[Double]
 
@@ -914,7 +914,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
-        val line= q.questionText +"\t"+ sentences(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\n"
+        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\n"
         bw.write(line)
       }
       bw.close()
