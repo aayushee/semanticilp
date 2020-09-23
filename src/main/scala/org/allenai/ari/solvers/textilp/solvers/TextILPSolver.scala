@@ -913,7 +913,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
-        val line= qpascores(i)+","+paascores(i)+"\n"
+        val line= q.questionText +","+ sentences(i) + "," + qpascores(i).toString+","+paascores(i).toString+"\n"
         bw.write(line)
       }
       bw.close()
