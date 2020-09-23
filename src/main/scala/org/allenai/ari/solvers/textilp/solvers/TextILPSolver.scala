@@ -844,8 +844,9 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         if (ilpSolver.getSolVal(s) > 1.0 - TextILPSolver.epsilon) 
         { sentList += x}
       }
-
-      val sentences = p.context.split("\\.")
+      val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
+      val sentences = pTA.getNumberOfSentences
+      //val sentences = p.context.split(" . ")
       val activeSentList = sentList.map(sentences(_)).mkString(",")
       val sentindexes = (0 to sentences.length-1).toList
 
@@ -909,18 +910,14 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val finalSentScores = (qpascores, paascores).zipped.map(_ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
-      val filename="AlignmentScores2.csv"
+      val filename="AlignmentScores2.tsv"
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
-        val line= q.questionText +","+ sentences(i) + "," + qpascores(i).toString+","+paascores(i).toString+"\n"
+        val line= q.questionText +"\t"+ sentences(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\n"
         bw.write(line)
       }
       bw.close()
-
-      val fw = new FileWriter("test.txt", true) ;
-      fw.write("This line appended to file!") ;
-      fw.close()
 
       questionParagraphAlignments.foreach {
         case (c1, c2, x) =>
