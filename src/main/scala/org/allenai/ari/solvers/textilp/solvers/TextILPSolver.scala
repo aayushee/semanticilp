@@ -1,6 +1,6 @@
 package org.allenai.ari.solvers.textilp.solvers
 
-import java.io.File
+import java.io.{BufferedWriter, File, FileWriter}
 import java.net.URL
 
 import edu.cmu.meteor.scorer.{MeteorConfiguration, MeteorScorer}
@@ -909,7 +909,18 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val finalSentScores = (qpascores, paascores).zipped.map(_ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
+      val filename="AlignmentScores2.csv"
+      val file = new File(filename)
+      val bw = new BufferedWriter(new FileWriter(file,true))
+      for (i<- 0 to sentindexes.length-1 ) {
+        val line= qpascores(i)+","+paascores(i)+"\n"
+        bw.write(line)
+      }
+      bw.close()
 
+      val fw = new FileWriter("test.txt", true) ;
+      fw.write("This line appended to file!") ;
+      fw.close()
 
       questionParagraphAlignments.foreach {
         case (c1, c2, x) =>

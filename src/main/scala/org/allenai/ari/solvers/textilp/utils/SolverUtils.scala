@@ -49,10 +49,10 @@ object SolverUtils {
     activeSentencesDiscount = 0.3, // tuned
     activeParagraphConstituentsWeight = 0.1, // tuned
     minQuestionTermsAligned = 1,
-    maxQuestionTermsAligned = 5,
+    maxQuestionTermsAligned = 8,
     minQuestionTermsAlignedRatio = 0.1,
     maxQuestionTermsAlignedRatio = 0.65,
-    maxActiveSentences = 15,
+    maxActiveSentences = 16,
     longerThan1TokenAnsPenalty = 0.0,
     longerThan2TokenAnsPenalty = 0.0,
     longerThan3TokenAnsPenalty = 0.02,
