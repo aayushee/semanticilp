@@ -914,7 +914,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
-        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+interParaScores(i).toString+"\t"+interSentScores+"\n"
+        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\t"+interParaScores(i).toString+"\t"+interSentScores(i)+"\n"
         bw.write(line)
       }
       bw.close()
