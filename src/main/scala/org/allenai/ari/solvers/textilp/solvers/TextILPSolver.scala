@@ -454,7 +454,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       questionParagraphAlignments ++= questionTokenParagraphTokenAlignments.toBuffer
 
-    /*  val interSentenceTokenAlignments = for {
+      val interSentenceTokenAlignments = for {
         pCons1 <- pTokens
         pCons2 <- pTokens
         score = alignmentFunction.scoreCellCell(pCons1.getSurfaceForm, pCons2.getSurfaceForm) + minPConsToPConsAlignment
@@ -464,7 +464,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       } yield (pCons1,pCons2,x)
 
-      interSentenceAlignments ++= interSentenceTokenAlignments.toBuffer */
+      interSentenceAlignments ++= interSentenceTokenAlignments.toBuffer
 
       // create paragraphToken-answerOption alignment edges
       val paragraphTokenAnswerAlignments = if (!isTrueFalseQuestion) {
@@ -491,8 +491,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       def getVariablesConnectedToParagraphToken(c: Constituent): Seq[V] = {
         questionTokenParagraphTokenAlignments.filter { case (_, cTmp, _) => cTmp == c }.map(_._3) ++
-          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4)
-         // interSentenceTokenAlignments.filter{ case (cTmp,_,_) => cTmp==c }.map(_._3)
+          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4) ++
+          interSentenceTokenAlignments.filter{ case (cTmp,_,_) => cTmp==c }.map(_._3)
       }
 
       def getVariablesConnectedToParagraphSentence(sentenceId: Int): Seq[V] = {
@@ -892,7 +892,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
 
-      /*val interSentScores = scala.collection.mutable.MutableList.empty[Double]
+      val interSentScores = scala.collection.mutable.MutableList.empty[Double]
 
       sentindexes.foreach { sentID=>
         var sentScore = 0.0
@@ -904,17 +904,17 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
          }
          }
         interSentScores += (sentScore/2)
-        }*/
+        }
 
-      //val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
-      val finalSentScores = (qpascores, paascores,interParaScores).zipped.map(_ + _ + _)
+      val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
+      //val finalSentScores = (qpascores, paascores,interParaScores).zipped.map(_ + _ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
-      val filename="AlignmentScores3.tsv"
+      val filename="AlignmentScores4.tsv"
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
-        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+interParaScores(i).toString+"\n"
+        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+interParaScores(i).toString+"\t"+interSentScores+"\n"
         bw.write(line)
       }
       bw.close()
