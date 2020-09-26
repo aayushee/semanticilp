@@ -439,7 +439,9 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
     }
 
     println("reasoningTypes: " + reasoningTypes)
-
+   // pTokens.foreach{ pToken=>
+     // println(pToken)
+      //println(pToken.getSentenceId)}
     if (reasoningTypes.contains(SimpleMatching)) {
       // create questionToken-paragraphToken alignment edges
       val questionTokenParagraphTokenAlignments = for {

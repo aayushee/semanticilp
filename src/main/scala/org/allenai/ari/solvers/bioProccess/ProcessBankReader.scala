@@ -85,7 +85,7 @@ object ProcessBankReader {
   val whatDoesItDoPattern = "what (does|do|can) .* do\\?".r
 
   def normalizeText(str: String): String = {
-    println("input with paranthesis: " + str)
+    //println("input with paranthesis: " + str)
     /*    val out = str.trim.replaceAll("\\(Figure \\d{1,2}[\\,\\.]{1}\\d{1,2}\\)", "").
       replaceAll("\\(see Figure \\d{1,2}[\\,\\.]{1}\\d{1,2}\\)", "").
       replaceAll("\\(Figure \\d{1,2}[\\,\\.]{1}\\d{1,2}[^ ]\\)", "").
@@ -99,10 +99,10 @@ object ProcessBankReader {
     //val out = str.trim.replaceAll("\\((.+?)\\)", "")
     val out = str.trim.replaceAll("\\(", "")
     val out2 = out.trim.replaceAll("\\)", "")
-
-
-    println("output after dropping the paranthesis: " + out)
-    out2
+    val out3 = out2.replaceAll("\\.\"", "")
+    val out4 = out3.replaceAll("\"","")
+    //println("output after dropping the paranthesis and quotes: " + out3)
+    out4
   }
 
   implicit class ImplicitConversionsFromParagraphs(paragraphList: List[Paragraph]) {

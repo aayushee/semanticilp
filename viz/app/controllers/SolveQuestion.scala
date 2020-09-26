@@ -165,7 +165,7 @@ class SolveQuestion @Inject() extends Controller {
     println("optionsPostProcessed: " + optionsPostProcessed)
 
 
-    println("snippet: " + snippet)
+    //println("snippet: " + snippet)
     val snippetPostprocessed = if (snippet.trim.length < 5) {
       // it's empty; get it with elastic-search
       println("Asking the elastic-search . . . " + question)
