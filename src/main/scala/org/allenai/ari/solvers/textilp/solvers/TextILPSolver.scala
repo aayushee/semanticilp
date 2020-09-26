@@ -880,7 +880,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
 
-      val interParaScores= scala.collection.mutable.MutableList.empty[Double]
+      /*val interParaScores= scala.collection.mutable.MutableList.empty[Double]
 
       sentindexes.foreach{ sentid=>
         var ipscore=0.0
@@ -891,12 +891,12 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
               ipscore += ilpSolver.getVarObjCoeff(x)
       }
           interParaScores+=ipscore
-      }
+      }*/
 
 
-      val interSentScores = scala.collection.mutable.MutableList.empty[Double]
+      /*val interSentScores = scala.collection.mutable.MutableList.empty[Double]
 
-    /*  sentindexes.foreach { sentID=>
+     sentindexes.foreach { sentID=>
         var sentScore = 0.0
         interSentenceAlignments.foreach { case (c1, c2, x) =>
          if (c1.getSentenceId == sentID) {
@@ -909,14 +909,14 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
         }*/
 
       //val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
-      val finalSentScores = (qpascores, paascores,interParaScores).zipped.map(_ + _ + _)
+      val finalSentScores = (qpascores, paascores).zipped.map(_ + _)
       val zippedSenScores =(sentindexes zip finalSentScores).toMap
       val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
-      val filename="AlignmentScores3.tsv"
+      val filename="AlignmentScores2.tsv"
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
-        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\t"+interParaScores(i).toString+"\n"
+        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\n"
 
         //val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\t"+interParaScores(i).toString+"\t"+interSentScores(i)+"\n"
         bw.write(line)
