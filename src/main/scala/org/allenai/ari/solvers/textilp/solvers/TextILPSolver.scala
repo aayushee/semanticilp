@@ -88,7 +88,7 @@ object TextILPSolver {
   val stanfordCorefViewName = "STANFORD_COREF"
   val curatorSRLViewName = "SRL_VERB_CURATOR"
   val clausIeViewName = "CLAUSIE"
-  val interSentFlag = 0
+  val interSentFlag = 1
   val interParaFlag = 1
   val epsilon = 0.001
   val oneActiveSentenceConstraint = true
@@ -495,8 +495,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       def getVariablesConnectedToParagraphToken(c: Constituent): Seq[V] = {
         questionTokenParagraphTokenAlignments.filter { case (_, cTmp, _) => cTmp == c }.map(_._3) ++
-          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4)
-          //interSentenceTokenAlignments.filter{ case (cTmp,_,_) => cTmp==c }.map(_._3)
+          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4) ++
+          interSentenceAlignments.filter{ case (cTmp,_,_) => cTmp==c }.map(_._3)
       }
 
       def getVariablesConnectedToParagraphSentence(sentenceId: Int): Seq[V] = {
@@ -906,7 +906,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           }
          }
          }
-        interSentScores += (sentScore/2)
+        interSentScores += sentScore
         }
         }
 
