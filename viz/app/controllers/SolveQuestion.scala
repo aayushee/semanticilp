@@ -162,7 +162,7 @@ class SolveQuestion @Inject() extends Controller {
       options.split("(\\([A-Z]\\)|\\/\\/)").toSeq.map(_.trim).filter(_.nonEmpty)
     }
 
-    println("optionsPostProcessed: " + optionsPostProcessed)
+    //println("optionsPostProcessed: " + optionsPostProcessed)
 
 
     //println("snippet: " + snippet)
@@ -175,7 +175,7 @@ class SolveQuestion @Inject() extends Controller {
     } else {
       snippet
     }
-    println("snippetPostprocessed: " + snippetPostprocessed)
+    //println("snippetPostprocessed: " + snippetPostprocessed)
     (optionsPostProcessed, snippetPostprocessed)
   }
 

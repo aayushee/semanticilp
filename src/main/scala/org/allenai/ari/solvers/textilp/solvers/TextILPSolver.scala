@@ -15,7 +15,7 @@ import org.allenai.ari.solvers.bioProccess.ProcessBankReader._
 import org.allenai.ari.solvers.textilp.{EntityRelationResult, _}
 import org.allenai.ari.solvers.textilp.alignment.{AlignmentFunction, KeywordTokenizer}
 import org.allenai.ari.solvers.textilp.ilpsolver.{IlpVar, _}
-import org.allenai.ari.solvers.textilp.solvers.TextILPSolver.minPConsToPConsAlignment
+import org.allenai.ari.solvers.textilp.solvers.TextILPSolver.{interParaFlag, interSentFlag, minPConsToPConsAlignment}
 import org.allenai.ari.solvers.textilp.utils.{AnnotationUtils, Constants, SolverUtils}
 
 import scala.collection.JavaConverters._
@@ -88,7 +88,8 @@ object TextILPSolver {
   val stanfordCorefViewName = "STANFORD_COREF"
   val curatorSRLViewName = "SRL_VERB_CURATOR"
   val clausIeViewName = "CLAUSIE"
-
+  val interSentFlag = 0
+  val interParaFlag = 1
   val epsilon = 0.001
   val oneActiveSentenceConstraint = true
 
@@ -456,7 +457,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       questionParagraphAlignments ++= questionTokenParagraphTokenAlignments.toBuffer
 
-     /* val interSentenceTokenAlignments = for {
+      if (interSentFlag > 0) {
+      val interSentenceTokenAlignments = for {
         pCons1 <- pTokens
         pCons2 <- pTokens
         score = alignmentFunction.scoreCellCell(pCons1.getSurfaceForm, pCons2.getSurfaceForm) + minPConsToPConsAlignment
@@ -466,7 +468,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       } yield (pCons1,pCons2,x)
 
-      interSentenceAlignments ++= interSentenceTokenAlignments.toBuffer*/
+      interSentenceAlignments ++= interSentenceTokenAlignments.toBuffer }
 
       // create paragraphToken-answerOption alignment edges
       val paragraphTokenAnswerAlignments = if (!isTrueFalseQuestion) {
@@ -893,9 +895,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           interParaScores+=ipscore
       }
 
-/*
       val interSentScores = scala.collection.mutable.MutableList.empty[Double]
-
+      if (interSentFlag>0) {
      sentindexes.foreach { sentID=>
         var sentScore = 0.0
         interSentenceAlignments.foreach { case (c1, c2, x) =>
@@ -907,21 +908,22 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
          }
         interSentScores += (sentScore/2)
         }
-*/
+        }
+
      // val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
-      val finalSentScores = (qpascores, paascores).zipped.map(_ + _)
-      val zippedSenScores =(sentindexes zip finalSentScores).toMap
-      val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
-      val filename="AlignmentScores2_again.tsv"
+      //val finalSentScores = (qpascores, paascores, interParaScores).zipped.map(_ + _ + _)
+      //val zippedSenScores =(sentindexes zip finalSentScores).toMap
+      //val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
+     /* val filename="AlignmentScores3.tsv"
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
-        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\n"
+        val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\t"+interParaScores(i)+"\n"
 
         //val line= q.questionText +"\t"+ sentindexes(i) + "\t" + qpascores(i).toString+"\t"+paascores(i).toString+"\t"+interParaScores(i).toString+"\t"+interSentScores(i)+"\n"
         bw.write(line)
       }
-      bw.close()
+      bw.close() */
 
       questionParagraphAlignments.foreach {
         case (c1, c2, x) =>
@@ -1056,7 +1058,20 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
 
       if (verbose) println("returning the answer  . . . ")
-      val solvedAnswerLog = sortedMap.toString
+      var solvedAnswerLog=""
+      //val solvedAnswerLog = sortedMap.toString
+      if (interSentFlag > 0) {
+        val ziplist = List(qpascores, paascores, interParaScores, interSentScores).transpose.toList
+         solvedAnswerLog = ziplist.toString
+      }
+      else if (interParaFlag > 0){
+        val ziplist = (qpascores, paascores, interParaScores).zipped.toList
+         solvedAnswerLog = ziplist.toString
+      }
+      else{
+        val ziplist = (qpascores, paascores).zipped.toList
+         solvedAnswerLog = ziplist.toString
+      }
       /*val solvedAnswerLog = "activeAnswerOptions: " + stringifyVariableSequence(activeAnswerOptions) +
         "  interParagraphAlignments: " + stringifyVariableSequence2(interParagraphAlignments) +
         "  questionParagraphAlignments: " + stringifyVariableSequence2(questionParagraphAlignments) +

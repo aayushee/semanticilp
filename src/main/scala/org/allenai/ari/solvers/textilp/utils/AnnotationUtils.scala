@@ -147,7 +147,7 @@ class AnnotationUtils() {
 
   def annotateWithEverything(input1: String, withFillInBlank: Boolean = false): TextAnnotation = synchronized {
     val input = SolverUtils.clearRedundantCharacters(input1)
-    println("Annotating input: " + input)
+   // println("Annotating input: " + input)
     val ta = pipelineService.createBasicTextAnnotation("", "", input)
     if (globalAnnotationCache.contains(ta)) {
       val ta2 = globalAnnotationCache.getTextAnnotation(ta)
@@ -159,9 +159,9 @@ class AnnotationUtils() {
     } else {
       println("--> normal views: ")
       val ta1 = pipelineServerClient.annotate(input)
-      println(" --> external: ")
+      //println(" --> external: ")
       //pipelineExternalAnnotatorsServerClient.addView(ta1)
-      println(" --> curator: ")
+      //println(" --> curator: ")
       //if (Constants.useCurator) annotateWithCuratorAndSaveUnderName(ta1.text, TextILPSolver.curatorSRLViewName, ViewNames.SRL_VERB, ta1)
       println(" --> adding fill in the blanks ")
       if (withFillInBlank) ta1.addView(fillInBlankAnnotator)
