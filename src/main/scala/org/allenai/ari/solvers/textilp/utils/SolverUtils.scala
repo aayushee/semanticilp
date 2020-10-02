@@ -52,7 +52,7 @@ object SolverUtils {
     maxQuestionTermsAligned = 8,
     minQuestionTermsAlignedRatio = 0.1,
     maxQuestionTermsAlignedRatio = 0.65,
-    maxActiveSentences = 10,
+    maxActiveSentences = 16,
     longerThan1TokenAnsPenalty = 0.0,
     longerThan2TokenAnsPenalty = 0.0,
     longerThan3TokenAnsPenalty = 0.02,
