@@ -88,7 +88,7 @@ object TextILPSolver {
   val stanfordCorefViewName = "STANFORD_COREF"
   val curatorSRLViewName = "SRL_VERB_CURATOR"
   val clausIeViewName = "CLAUSIE"
-  val interSentFlag = 1
+  val interSentFlag = 0
   val interParaFlag = 1
   val epsilon = 0.001
   val oneActiveSentenceConstraint = true
@@ -495,8 +495,8 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
       def getVariablesConnectedToParagraphToken(c: Constituent): Seq[V] = {
         questionTokenParagraphTokenAlignments.filter { case (_, cTmp, _) => cTmp == c }.map(_._3) ++
-          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4) ++
-          interSentenceAlignments.filter{ case (cTmp,_,_) => cTmp==c }.map(_._3)
+          paragraphTokenAnswerAlignments.filter { case (cTmp, _, _, _) => cTmp == c }.map(_._4)
+        //  interSentenceAlignments.filter{ case (cTmp,_,_) => cTmp==c }.map(_._3)
       }
 
       def getVariablesConnectedToParagraphSentence(sentenceId: Int): Seq[V] = {
@@ -843,78 +843,79 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       val relationSet = scala.collection.mutable.Set[(String, String)]()
       var sentList = new ListBuffer[Int]()
 
-      activeSentences.foreach{
-        case(x,s) =>
-        if (ilpSolver.getSolVal(s) > 1.0 - TextILPSolver.epsilon) 
-        { sentList += x}
+      activeSentences.foreach {
+        case (x, s) =>
+          if (ilpSolver.getSolVal(s) > 1.0 - TextILPSolver.epsilon) {
+            sentList += x
+          }
       }
       val pTA = p.contextTAOpt.getOrElse(throw new Exception("The annotation for the paragraph not found . . . "))
       val sentences = pTA.getNumberOfSentences
       //val sentences = p.context.split(" . ")
       //val activeSentList = sentList.map(sentences(_)).mkString(",")
-      val sentindexes = (0 to sentences-1).toList
+      val sentindexes = (0 to sentences - 1).toList
 
       val qpascores = scala.collection.mutable.MutableList.empty[Double]
 
-      sentindexes.foreach{ sentid=>
-        var Entscore=0.0
-      questionParagraphAlignments.foreach {
-        case (c1, c2, x) =>
-          if (c2.getSentenceId==sentid)
-          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
-            Entscore += ilpSolver.getVarObjCoeff(x)
-      }
-        qpascores +=Entscore
+      sentindexes.foreach { sentid =>
+        var Entscore = 0.0
+        questionParagraphAlignments.foreach {
+          case (c1, c2, x) =>
+            if (c2.getSentenceId == sentid)
+              if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
+                Entscore += ilpSolver.getVarObjCoeff(x)
+        }
+        qpascores += Entscore
       }
 
 
       val paascores = scala.collection.mutable.MutableList.empty[Double]
 
       sentindexes.foreach { sentid =>
-        var Entscore2=0.0
+        var Entscore2 = 0.0
         paragraphAnswerAlignments.foreach {
           case (c1, a1, a2, x) =>
             if (c1.getSentenceId == sentid)
-            if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
-              Entscore2 += ilpSolver.getVarObjCoeff(x)
+              if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
+                Entscore2 += ilpSolver.getVarObjCoeff(x)
         }
-        paascores +=Entscore2
+        paascores += Entscore2
       }
 
 
-      val interParaScores= scala.collection.mutable.MutableList.empty[Double]
+      val interParaScores = scala.collection.mutable.MutableList.empty[Double]
 
-      sentindexes.foreach{ sentid=>
-        var ipscore=0.0
-      interParagraphAlignments.foreach {
-        case (c1, c2, x) =>
-          if (c1.getSentenceId == sentid)
-            if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
-              ipscore += ilpSolver.getVarObjCoeff(x)
-      }
-          interParaScores+=ipscore
+      sentindexes.foreach { sentid =>
+        var ipscore = 0.0
+        interParagraphAlignments.foreach {
+          case (c1, c2, x) =>
+            if (c1.getSentenceId == sentid)
+              if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon)
+                ipscore += ilpSolver.getVarObjCoeff(x)
+        }
+        interParaScores += ipscore
       }
 
       val interSentScores = scala.collection.mutable.MutableList.empty[Double]
-      if (interSentFlag>0) {
-     sentindexes.foreach { sentID=>
-        var sentScore = 0.0
-        interSentenceAlignments.foreach { case (c1, c2, x) =>
-         if (c1.getSentenceId == sentID) {
-          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
-            sentScore += ilpSolver.getVarObjCoeff(x)
+      if (interSentFlag > 0) {
+        sentindexes.foreach { sentID =>
+          var sentScore = 0.0
+          interSentenceAlignments.foreach { case (c1, c2, x) =>
+            if (c1.getSentenceId == sentID) {
+              if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
+                sentScore += ilpSolver.getVarObjCoeff(x)
+              }
+            }
           }
-         }
-         }
-        interSentScores += sentScore
+          interSentScores += sentScore
         }
-        }
+      }
 
-     // val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
+      // val finalSentScores = List(qpascores, paascores, interParaScores, interSentScores).transpose.map(_.sum)
       //val finalSentScores = (qpascores, paascores, interParaScores).zipped.map(_ + _ + _)
       //val zippedSenScores =(sentindexes zip finalSentScores).toMap
       //val sortedMap = scala.collection.immutable.ListMap(zippedSenScores.toSeq.sortWith(_._2 > _._2):_*)
-     /* val filename="AlignmentScores3.tsv"
+      /* val filename="AlignmentScores3.tsv"
       val file = new File(filename)
       val bw = new BufferedWriter(new FileWriter(file,true))
       for (i<- 0 to sentindexes.length-1 ) {
@@ -925,137 +926,6 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
       }
       bw.close() */
 
-      questionParagraphAlignments.foreach {
-        case (c1, c2, x) =>
-          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
-            val qBeginIndex = questionBeginning.length + c1.getStartCharOffset
-            val qEndIndex = qBeginIndex + c1.getSurfaceForm.length
-            val span1 = (qBeginIndex, qEndIndex)
-            val t1 = if (!entityMap.contains(span1)) {
-              val t1 = "T" + eIter
-              eIter = eIter + 1
-              entities += Entity(t1, c1.getSurfaceForm, Seq(span1))
-              entityMap.put(span1, t1)
-              t1
-            }
-            else {
-              entityMap(span1)
-            }
-            val pBeginIndex = c2.getStartCharOffset + questionString.length + paragraphBeginning.length
-            val pEndIndex = pBeginIndex + c2.getSurfaceForm.length
-            val span2 = (pBeginIndex, pEndIndex)
-            val t2 = if (!entityMap.contains(span2)) {
-              val t2 = "T" + eIter
-              eIter = eIter + 1
-              entities += Entity(t2, c2.getSurfaceForm, Seq(span2))
-              entityMap.put(span2, t2)
-              t2
-            }
-            else {
-              entityMap(span2)
-            }
-
-            if (!relationSet.contains((t1, t2))) {
-              relations += Relation("R" + rIter, t1, t2, ilpSolver.getVarObjCoeff(x))
-              rIter = rIter + 1
-              relationSet.add((t1, t2))
-            }
-          }
-      }
-
-      paragraphAnswerAlignments.foreach {
-        case (c1, ansIdx, ansConsIdx, x) =>
-          if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
-            val pBeginIndex = c1.getStartCharOffset + questionString.length + paragraphBeginning.length
-            val pEndIndex = pBeginIndex + c1.getSurfaceForm.length
-            val span1 = (pBeginIndex, pEndIndex)
-            val t1 = if (!entityMap.contains(span1)) {
-              val t1 = "T" + eIter
-              entities += Entity(t1, c1.getSurfaceForm, Seq(span1))
-              entityMap.put(span1, t1)
-              eIter = eIter + 1
-              t1
-            } else {
-              entityMap(span1)
-            }
-
-            val ansString = aTokens(ansIdx)(ansConsIdx)
-            val ansswerBeginIdx = choiceString.indexOf(q.answers(ansIdx).answerText)
-            val oBeginIndex = choiceString.indexOf(ansString, ansswerBeginIdx) + questionString.length + paragraphString.length
-            val oEndIndex = oBeginIndex + ansString.length
-            val span2 = (oBeginIndex, oEndIndex)
-            val t2 = if (!entityMap.contains(span2)) {
-              val t2 = "T" + eIter
-              entities += Entity(t2, ansString, Seq(span2))
-              eIter = eIter + 1
-              entityMap.put(span2, t2)
-              t2
-            }
-            else {
-              entityMap(span2)
-            }
-            if (!relationSet.contains((t1, t2))) {
-              relations += Relation("R" + rIter, t1, t2, ilpSolver.getVarObjCoeff(x))
-              rIter = rIter + 1
-              relationSet.add((t1, t2))
-            }
-          }
-      }
-
-      // inter-paragraph alignments
-      interParagraphAlignments.foreach { case (c1, c2, x) =>
-        if (ilpSolver.getSolVal(x) > 1.0 - TextILPSolver.epsilon) {
-          val pBeginIndex1 = c1.getStartCharOffset + questionString.length + paragraphBeginning.length
-          val pEndIndex1 = pBeginIndex1 + c1.getSurfaceForm.length
-          val span1 = (pBeginIndex1, pEndIndex1)
-          val t1 = if (!entityMap.contains(span1)) {
-            val t1 = "T" + eIter
-            entities += Entity(t1, c1.getSurfaceForm, Seq(span1))
-            entityMap.put(span1, t1)
-            eIter = eIter + 1
-            t1
-          } else {
-            entityMap(span1)
-          }
-          val pBeginIndex2 = c2.getStartCharOffset + questionString.length + paragraphBeginning.length
-          val pEndIndex2 = pBeginIndex2 + c2.getSurfaceForm.length
-          val span2 = (pBeginIndex2, pEndIndex2)
-          val t2 = if (!entityMap.contains(span2)) {
-            val t2 = "T" + eIter
-            entities += Entity(t2, c2.getSurfaceForm, Seq(span2))
-            entityMap.put(span2, t2)
-            eIter = eIter + 1
-            t2
-          } else {
-            entityMap(span2)
-          }
-          if (!relationSet.contains((t1, t2))) {
-            relations += Relation("R" + rIter, t1, t2, ilpSolver.getVarObjCoeff(x))
-            rIter = rIter + 1
-            relationSet.add((t1, t2))
-          }
-        }
-
-        if (isTrueFalseQuestion) {
-          // add the answer option span manually
-          selectedIndex.foreach { idx =>
-            val ansText = q.answers(idx).answerText
-            val oBeginIndex = choiceString.indexOf(ansText) + questionString.length + paragraphString.length
-            val oEndIndex = oBeginIndex + ansText.length
-            val span2 = (oBeginIndex, oEndIndex)
-            val t2 = if (!entityMap.contains(span2)) {
-              val t2 = "T" + eIter
-              entities += Entity(t2, ansText, Seq(span2))
-              eIter = eIter + 1
-              entityMap.put(span2, t2)
-              t2
-            }
-            else {
-              entityMap(span2)
-            }
-          }
-        }
-      }
 
       if (verbose) println("returning the answer  . . . ")
       var solvedAnswerLog=""
