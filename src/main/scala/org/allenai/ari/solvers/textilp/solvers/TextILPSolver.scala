@@ -89,7 +89,7 @@ object TextILPSolver {
   val curatorSRLViewName = "SRL_VERB_CURATOR"
   val clausIeViewName = "CLAUSIE"
   val interSentFlag = 0
-  val interParaFlag = 0
+  val interParaFlag = 1
   val epsilon = 0.001
   val oneActiveSentenceConstraint = true
 
