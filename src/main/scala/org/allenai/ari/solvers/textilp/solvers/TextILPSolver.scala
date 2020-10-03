@@ -90,7 +90,6 @@ object TextILPSolver {
   val clausIeViewName = "CLAUSIE"
   val interSentFlag = 0
   val interParaFlag = 0
-  val interParaFlag = 0
   val epsilon = 0.001
   val oneActiveSentenceConstraint = true
 
