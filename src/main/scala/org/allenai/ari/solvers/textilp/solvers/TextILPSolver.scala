@@ -89,7 +89,8 @@ object TextILPSolver {
   val curatorSRLViewName = "SRL_VERB_CURATOR"
   val clausIeViewName = "CLAUSIE"
   val interSentFlag = 0
-  val interParaFlag = 1
+  val interParaFlag = 0
+  val interParaFlag = 0
   val epsilon = 0.001
   val oneActiveSentenceConstraint = true
 
@@ -596,61 +597,63 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
           false
         }
       }
+      if(interParaFlag>0)
+      {
+        if (p.contextTAOpt.get.hasView(ViewNames.DEPENDENCY_STANFORD)) {
+          val depView = p.contextTAOpt.get.getView(ViewNames.DEPENDENCY_STANFORD)
+          val depRelations = depView.getRelations.asScala
+          interParagraphAlignments = depRelations.zipWithIndex.map { case (r, idx) =>
+            val startConsOpt = getParagraphConsCovering(r.getSource)
+            val targetConsOpt = getParagraphConsCovering(r.getTarget)
+            if (startConsOpt.isDefined && targetConsOpt.isDefined && startConsOpt.get != targetConsOpt.get) {
+              val x = ilpSolver.createBinaryVar(s"Relation:$idx", params.firstOrderDependencyEdgeAlignments)
 
-      if (p.contextTAOpt.get.hasView(ViewNames.DEPENDENCY_STANFORD)) {
-        val depView = p.contextTAOpt.get.getView(ViewNames.DEPENDENCY_STANFORD)
-        val depRelations = depView.getRelations.asScala
-        interParagraphAlignments = depRelations.zipWithIndex.map { case (r, idx) =>
-          val startConsOpt = getParagraphConsCovering(r.getSource)
-          val targetConsOpt = getParagraphConsCovering(r.getTarget)
-          if (startConsOpt.isDefined && targetConsOpt.isDefined && startConsOpt.get != targetConsOpt.get) {
-            val x = ilpSolver.createBinaryVar(s"Relation:$idx", params.firstOrderDependencyEdgeAlignments)
+              // this relation variable is active, only if its two sides are active
+              val startVar = activeParagraphConstituents(startConsOpt.get)
+              val targetVar = activeParagraphConstituents(targetConsOpt.get)
+              ilpSolver.addConsBasicLinear("dependencyVariableActiveOnlyIfSourceConsIsActive",
+                Seq(x, startVar), Seq(1.0, -1.0), None, Some(0.0))
+              ilpSolver.addConsBasicLinear("dependencyVariableActiveOnlyIfSourceConsIsActive",
+                Seq(x, targetVar), Seq(1.0, -1.0), None, Some(0.0))
 
-            // this relation variable is active, only if its two sides are active
-            val startVar = activeParagraphConstituents(startConsOpt.get)
-            val targetVar = activeParagraphConstituents(targetConsOpt.get)
-            ilpSolver.addConsBasicLinear("dependencyVariableActiveOnlyIfSourceConsIsActive",
-              Seq(x, startVar), Seq(1.0, -1.0), None, Some(0.0))
-            ilpSolver.addConsBasicLinear("dependencyVariableActiveOnlyIfSourceConsIsActive",
-              Seq(x, targetVar), Seq(1.0, -1.0), None, Some(0.0))
+              val ansList1 = getAnswerOptionVariablesConnectedToParagraph(startConsOpt.get)
+              val ansList2 = getAnswerOptionVariablesConnectedToParagraph(targetConsOpt.get)
 
-            val ansList1 = getAnswerOptionVariablesConnectedToParagraph(startConsOpt.get)
-            val ansList2 = getAnswerOptionVariablesConnectedToParagraph(targetConsOpt.get)
-
-            val variablesPairsInAnswerOptionsWithDependencyRelation = for {
-              a <- ansList1
-              b <- ansList2
-              if a._1 == b._1 // same answer
-              if a._2 != b._2 // different tok
-              if twoAnswerConsAreConnectedViaDependencyParse(a._1, a._2, b._2) // they are connected via dep parse
-            }
-              yield {
-                val weight = 0.0
-                // TODO: tune this
-                val activePair = ilpSolver.createBinaryVar(s"activeAnsweOptionPairs", weight)
-                ilpSolver.addConsBasicLinear("NoActivePairIfNonAreActive", Seq(a._3, b._3, activePair), Seq(-1.0, -1.0, 1.0), None, Some(0.0))
-                ilpSolver.addConsBasicLinear("NoActivePairIfNonAreActive", Seq(activePair, a._3), Seq(-1.0, 1.0), None, Some(0.0))
-                ilpSolver.addConsBasicLinear("NoActivePairIfNonAreActive", Seq(activePair, b._3), Seq(-1.0, 1.0), None, Some(0.0))
-                activePair
+              val variablesPairsInAnswerOptionsWithDependencyRelation = for {
+                a <- ansList1
+                b <- ansList2
+                if a._1 == b._1 // same answer
+                if a._2 != b._2 // different tok
+                if twoAnswerConsAreConnectedViaDependencyParse(a._1, a._2, b._2) // they are connected via dep parse
               }
+                yield {
+                  val weight = 0.0
+                  // TODO: tune this
+                  val activePair = ilpSolver.createBinaryVar(s"activeAnsweOptionPairs", weight)
+                  ilpSolver.addConsBasicLinear("NoActivePairIfNonAreActive", Seq(a._3, b._3, activePair), Seq(-1.0, -1.0, 1.0), None, Some(0.0))
+                  ilpSolver.addConsBasicLinear("NoActivePairIfNonAreActive", Seq(activePair, a._3), Seq(-1.0, 1.0), None, Some(0.0))
+                  ilpSolver.addConsBasicLinear("NoActivePairIfNonAreActive", Seq(activePair, b._3), Seq(-1.0, 1.0), None, Some(0.0))
+                  activePair
+                }
 
-            // if the paragraph relation pair is active, at least one answer response pair should be active
-            // in other words
-            ilpSolver.addConsBasicLinear("atLeastOnePairShouldBeActive",
-              variablesPairsInAnswerOptionsWithDependencyRelation :+ x,
-              Array.fill(variablesPairsInAnswerOptionsWithDependencyRelation.length) {
-                -1.0
-              } :+ 1.0, None, Some(0.0))
+              // if the paragraph relation pair is active, at least one answer response pair should be active
+              // in other words
+              ilpSolver.addConsBasicLinear("atLeastOnePairShouldBeActive",
+                variablesPairsInAnswerOptionsWithDependencyRelation :+ x,
+                Array.fill(variablesPairsInAnswerOptionsWithDependencyRelation.length) {
+                  -1.0
+                } :+ 1.0, None, Some(0.0))
 
-            Some(startConsOpt.get, targetConsOpt.get, x)
-          }
-          else {
-            None
-          }
-        }.collect { case a if a.isDefined => a.get }
-      }
-      else {
-        println("Paragraph does not contain parse-view . . . ")
+              Some(startConsOpt.get, targetConsOpt.get, x)
+            }
+            else {
+              None
+            }
+          }.collect { case a if a.isDefined => a.get }
+        }
+        else {
+          println("Paragraph does not contain parse-view . . . ")
+        }
       }
 
       // there is an upper-bound on the max number of active tokens in each sentence
@@ -884,7 +887,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
 
 
       val interParaScores = scala.collection.mutable.MutableList.empty[Double]
-
+      if(interParaFlag > 0){
       sentindexes.foreach { sentid =>
         var ipscore = 0.0
         interParagraphAlignments.foreach {
@@ -894,7 +897,7 @@ class TextILPSolver(annotationUtils: AnnotationUtils,
                 ipscore += ilpSolver.getVarObjCoeff(x)
         }
         interParaScores += ipscore
-      }
+      }}
 
       val interSentScores = scala.collection.mutable.MutableList.empty[Double]
       if (interSentFlag > 0) {
